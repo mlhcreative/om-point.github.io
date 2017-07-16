@@ -1,0 +1,265 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:900,400,100);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100italic,100,900);
+@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700);
+*{margin:0;padding:0;box-sizing: border-box;}
+html{
+	overflow-x:hidden;
+}
+body{
+	background:#FFF;
+	color: #16191D;
+	font-family: 'Source Serif Pro', serif;
+	font-size: 16px;
+	letter-spacing: 0.025em;
+	word-spacing: 0.041em;
+	line-height: 1.25em;
+	text-decoration: none;
+	overflow-x:hidden;
+}
+body, html {
+    height: 100%;
+}
+.bg { 
+    background-image: url("images/om-point.png");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #000000;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: #ffffff; /*White*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    display: block;
+    transition: 0.3s
+}
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #000000;
+}
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+header{
+	background: none;
+	display: block;
+	top: 0%;
+	padding: 2%;
+	width:100%;
+	top: 0;
+	z-index:1;
+}
+#logo{
+	float: left;
+  padding: 0.5%;
+  margin: 1.5% 0% 0% 0%;
+}
+#hamburger {
+  float: right;
+  padding: 0.5%;
+  margin: 0% 0% 1.5% 0%;
+}
+h1 {
+	font-family: 'Raleway', sans-serif;	
+	font-weight: 900;
+	font-size: 2em;
+	line-height: 1.5em;
+	text-transform: uppercase;
+	text-align: center;
+}
+#menu {
+float: right;
+font-weight: 400;
+font-size: 1.5em;
+padding: 0.5%;
+margin: 0% 0% 1.5% 0%;
+}
+h2{
+	font-family: 'Raleway', sans-serif;	
+	font-size: 1.5em;
+	font-weight: 100;
+	line-height: 2em;
+	text-transform: uppercase;
+	text-align: center;
+}
+.container1 {
+    margin: 5px;
+    width: 1050px;
+    height: 400px;
+    line-height: 115px;
+    text-align: center;
+    border: 1px solid none;
+    position: relative;
+}
+.container2 {
+    margin: 5px;
+    width: 1050px;
+    height: 300px;
+    line-height: 115px;
+    text-align: center;
+    border: 1px solid none;
+    position: relative;
+}
+.resize_fit_center {
+    max-width:100%;
+    max-height:100%;
+    vertical-align: middle;
+}
+input {
+  border: 2px solid grey;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 18px;
+  outline: none;
+}
+section {
+	max-width: 45em;
+	margin: auto;
+	padding:2em 2em 2em 2em;
+	clear: both;
+	position: relative;
+}
+.reservations {
+	display: block;
+	float: left;
+	margin: auto;
+	padding: 30px;
+	max-width: 100%;
+}
+button {
+  	font-family: "Roboto", sans-serif;
+ 	font-size: 18px;
+  	position: relative;
+  	z-index: 1;
+  	display: block;
+  	width: 200px;
+  	margin: 30px auto;
+  	padding: 10px;
+  	cursor: pointer;
+  	border: 0;
+  	border-radius: 4px;
+  	outline: 0;
+  	background-color: #f78fa7;
+  	box-shadow: inset 0 -3px rgba(0, 0, 0, .15);
+}
+.existing-reservations {
+	display: block;
+	float: left;
+	margin: auto;
+	padding: 5px 100px 5px 5px;
+	border: 5px;
+	max-width: 25em;
+	text-align: center;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    padding: 30px;
+	max-width: 100%;
+}
+th {
+	padding: 5px 65px 5px 5px;
+}
+#reservations-record {
+	font-weight: 700;
+	text-align: center;
+}
+#customer-review {
+	text-align: center;
+	font-style: italic;
+}
+footer{
+    background: transparent;
+}
+footer{
+  display: block;
+  padding:2%;
+  position: relative;
+}
+.footer-nav, #social{
+  bottom: 0.5% ;
+  top: 0%;
+  padding: 0%;
+  text-align: center;
+}
+.clearfix:after {
+	visibility: hidden;
+    	display: block;
+    	font-size: 0;
+    	content: " ";
+    	clear: both;
+    	height: 0;
+}
+
+@media only screen and (min-width:320px) and (max-width:427px){
+.container1 {
+    margin: auto;
+    width: 200;
+    height: 200;
+}
+.container2 {
+    margin: auto;
+    width: 200;
+    height: 200;
+}
+section {
+	margin: auto;
+	padding:auto;
+	}
+}
+

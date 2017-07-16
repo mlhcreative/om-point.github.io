@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Monique's Final Project</title>
+   <link rel="stylesheet" type="text/css" href="css/reset.css">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <meta name="viewport" content="width=device-width, initial scale=1">
+</head>
+<body class="bg">
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Accommodation</a>
+  <a href="#">Gallery</a>
+  <a href="#">Location</a>
+  <a href="#">Contact</a>
+</div>
+<!-- Use any element to open the sidenav -->
+<span onclick="openNav('#hamburger')">open</span>
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+<header class="clearfix">
+   	<img src="images/om-point_logo.png" alt="Om Point Logo" id="logo">
+   	<div class="container" id="hamburger" onclick="myFunction(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+<h1 id="menu">Menu</h1>
+</header>
+<section>
+		<div class="reservations" class="clearfix">
+			<h2>Reservations</h2>
+			<h3>Make a reservation:</h3>
+			<p><br />First name</p>
+			<form>
+    			<input type="text" placeholder="first name">
+			</form>
+			<p><br />Last name</p>
+			<form>
+    			<input type="text" placeholder="last name">
+			</form>
+			<p><br />Phone number</p>
+			<form>
+    			<input type="text" placeholder="phone number">
+			</form>
+			<p><br />Email address</p>
+			<form>
+    			<input type="text" placeholder="email address">
+			</form>
+			<p><br />Room type</p>
+			<form>
+    			<input type="text" placeholder="room type">
+			</form>
+			<p><br />Number of guests</p>
+			<form>
+    			<input type="text" placeholder="email address">
+			</form>
+			<p><br />Date</p>
+			<form>
+    			<input type="text" placeholder="email address">
+			</form>
+			<p><br />Time</p>
+			<form>
+    			<input type="text" placeholder="email address">
+			</form>
+			<form>
+    			<button>Confirm Reservation</button>
+			</form>
+		</div>
+		<div class="reservations" class="clearfix">
+			<h2>Existing reservations</h3>
+		<table>
+			<thead class="existing-reservations">
+				<th>Name</th>
+				<th>Day</th>
+			</thead>
+			<tbody id="reservations-record">[form data will publish here]</tbody>
+		</table>
+		</div>
+	</section>
+	 <section class="clearfix">
+	 	<h2>Come dine with us</h2>
+	 </section>
+	 <div id="map"></div>
+        <footer>
+		<div>
+		<nav id="social">
+			<a href="#" target="_blank"><img src="images/twitter-logo.png" alt="link to MLHCDS Twitter feed" class="social-icon"></a>
+			<a href="#" target="_blank"><img src="images/linkedin-logo.png" alt="link to MLHCDS Linkedin page" class="social-icon"></a>
+			<a href="#" target="_blank"><img src="images/facebook-logo.png" alt="link to MLHCDS Facebook page" class="social-icon"></a>
+			<a href="#" target="_blank"><img src="images/insta-logo.png" alt="link to MLHCDS Instagram feed" class="social-icon"></a>
+		</nav>
+		</div>
+		<div>
+			<p>&copy;2016</p>
+		</div>
+	</footer>
+	</div
+   <script src="js/jquery-3.1.0.js"></script>
+   <script src="js/main.js"></script>
+   <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwJ8DXNarALuzaWQFdo8TmS2WcRYnj1Oo&callback=initMap"></script>
+</body>
+</html>
