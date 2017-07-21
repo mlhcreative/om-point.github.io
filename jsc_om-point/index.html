@@ -8,17 +8,38 @@
    <meta name="viewport" content="width=device-width, initial scale=1">
 </head>
 <body class="bg">
-<div id="mySidenav" class="sidenav">
+<div id="mySidenavMenu" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Accommodation</a>
-  <a href="#">Gallery</a>
-  <a href="#">Location</a>
-  <a href="#">Contact</a>
+  <nav><a href="#" class="mainMenuItem">About</a></nav>
+  <nav><a href="#" class="mainMenuItem">Accommodation</a></nav>
+  <nav><a href="#" class="mainMenuItem">Gallery</a></nav>
+  <nav><a href="#" class="mainMenuItem">Location</a></nav>
+  <nav><a href="#" class="mainMenuItem">Contact</a></nav>
 </div>
-<!-- Use any element to open the sidenav -->
+<!-- Uelement to open the sidenav -->
 <span onclick="openNav('#hamburger')">open</span>
-<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<!-- Add all page content inside this div - side nav to push page content to the right -->
+<div id="contact" class="sidenav">
+		<h1>CONTACT</h1>
+		<button id="book-now">BOOK ONLINE</button><br /><br />
+		<h2>OPENING HOURS</h2><br />
+		<h2>MONDAY - FRIDAY</h2>
+		<p>8:00am - 8:00pm</p><br />
+		<h2>SATURDAY</h2>
+		<p>10:00am - 8:00pm</p><br />
+		<h2>SUNDAYS &amp; PUBLIC HOLIDAYS</h2>
+		<p>10:00am - 5:00pm</p><br /><br />
+		<h2>DETAILS</h2><br />
+		<p>0800 667 0468</p>
+		<p><a href="mailto:ompointinfo@mail.com">ompointinfo@mail.com</p></a><br />
+		<p>123 Om Point Way, Om Point 1234</p><br />
+		<div id="mini-map"></div>
+</div>
+<div id="accommodation" class="sidenav">
+		<h1>ACCOMMODATION</h1>
+		<button id="book-now">BOOK ONLINE</button><br /><br />
+		<h2>OPENING HOURS</h2><br />
+</div>
 <div id="main">
 <header class="clearfix">
    	<img src="images/om-point_logo.png" alt="Om Point Logo" id="logo">
@@ -27,11 +48,11 @@
   <div class="bar2"></div>
   <div class="bar3"></div>
 </div>
-<h1 id="menu">Menu</h1>
+<h2 id="menu">Menu</h2>
 </header>
-<section>
-		<div class="reservations" class="clearfix">
-			<h2>Reservations</h2>
+<section class="main-transform" id="bookings">
+		<div id="form-part-1" class="clearfix">
+			<h1>Reservations</h1>
 			<h3>Make a reservation:</h3>
 			<p><br />First name</p>
 			<form>
@@ -49,6 +70,8 @@
 			<form>
     			<input type="text" placeholder="email address">
 			</form>
+		</div>
+		<div id="form-part-2" class="clearfix">
 			<p><br />Room type</p>
 			<form>
     			<input type="text" placeholder="room type">
@@ -66,31 +89,38 @@
     			<input type="text" placeholder="email address">
 			</form>
 			<form>
-    			<button>Confirm Reservation</button>
+    			<button>Confirm Booking</button>
 			</form>
 		</div>
-		<div class="reservations" class="clearfix">
-			<h2>Existing reservations</h3>
-		<table>
-			<thead class="existing-reservations">
-				<th>Name</th>
-				<th>Day</th>
-			</thead>
-			<tbody id="reservations-record">[form data will publish here]</tbody>
-		</table>
-		</div>
+	</section>
+	<section id="gallery">
+		<p id="arrow-left">&#x219E;</p>
+		<div class='img-container'>
+    		<img class='resize_fit_center' id='Om-Point-gallery' src="images/om-point.png" alt="Om Point" />
+    	</div>	
+    	<p id="arrow-right">&#x21A0;</p>
+	</section>
+	<section id="location">
+	<h1>LOCATION</h1>
+	<table>
+	<th><nav><a href="" class="sub-menu-nav">TRANSPORT</a></nav></th>
+	</th><nav><a href="" class="sub-menu-nav">ENTERTAINMENT</a></nav></th>
+	<</th><nav><a href="" class="sub-menu-nav">RECREATION</a></nav></th>
+	</th><nav><a href="" class="sub-menu-nav">SURF-PICKS</a></nav><br /></th>
+	</table>
+	<div id="map"></div>
 	</section>
 	 <section class="clearfix">
-	 	<h2>Come dine with us</h2>
+	 	<nav><h2 id="hours"><a href="">OPENING HOURS</h2></a></nav>
+	 	<nav><h2 id="book-online"><a href="">BOOK ONLINE</h2></a></nav>
 	 </section>
-	 <div id="map"></div>
         <footer>
 		<div>
 		<nav id="social">
-			<a href="#" target="_blank"><img src="images/twitter-logo.png" alt="link to MLHCDS Twitter feed" class="social-icon"></a>
-			<a href="#" target="_blank"><img src="images/linkedin-logo.png" alt="link to MLHCDS Linkedin page" class="social-icon"></a>
-			<a href="#" target="_blank"><img src="images/facebook-logo.png" alt="link to MLHCDS Facebook page" class="social-icon"></a>
-			<a href="#" target="_blank"><img src="images/insta-logo.png" alt="link to MLHCDS Instagram feed" class="social-icon"></a>
+			<a href="#" target="_blank"><img src="..images/twitter-logo.png" alt="link to MLHCDS Twitter feed" class="social-icon"></a>
+			<a href="#" target="_blank"><img src="..images/linkedin-logo.png" alt="link to MLHCDS Linkedin page" class="social-icon"></a>
+			<a href="#" target="_blank"><img src="..images/facebook-logo.png" alt="link to MLHCDS Facebook page" class="social-icon"></a>
+			<a href="#" target="_blank"><img src="..images/insta-logo.png" alt="link to MLHCDS Instagram feed" class="social-icon"></a>
 		</nav>
 		</div>
 		<div>
