@@ -1,5 +1,4 @@
 //Page loads
-//mouse arrow becomes pointer hand when user hovers over a link i.e.logo, menu, opening hours and book online.
 //When user clicks on 'Location' or 'gallery' side nav bar slides right and background image changes to white. 
 //If user slescts gallery image box shown centered with arrows either side.
 //if user clicks arrows image slides out to the left, new image slides in from the right

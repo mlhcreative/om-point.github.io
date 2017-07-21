@@ -140,6 +140,7 @@ th {
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    transform: right;
 }
 /*  side nav links */
 .sidenav a {
@@ -202,6 +203,8 @@ th {
   float: left;
   padding: 0.5%;
   margin: 1.5% 0% 0% 0%;
+  top: 0;
+  z-index: 1;
 }
 /*.container
 (contain hamburger menu icon inside header) */
@@ -216,6 +219,7 @@ th {
   float: right;
   padding: 0.5%;
   margin: 0% 0% 1.5% 0%;
+  top: 0;
 }
 
 /* .bar1 .bar2 .bar3  
@@ -250,6 +254,7 @@ font-weight: 400;
 font-size: 1.5em;
 padding: 0.5%;
 margin: 0% 0% 1.5% 0%;
+top: 0;
 }
 
 /*  #bookings
@@ -285,6 +290,7 @@ margin: 0% 0% 1.5% 0%;
     text-align: center;
     border: 1px solid none;
     position: relative;
+    z-index: 1;
 }
 
 /*  .resize_fit_center  */
@@ -304,9 +310,16 @@ margin: 0% 0% 1.5% 0%;
 (sub-menu navigation items effect map)
 
 #map
-(map inside location section. Updates depending on which sub-menu item user clicks - markers and color change)
+(map inside location section. Updates depending on which sub-menu item user clicks - markers and color change)  */
+#map {
+  width: 75%;
+  height: 500px;
+  margin: 0 auto;
+  top: 0;
+  z-index: 1;
+}
 
-#hours
+/*  #hours
 (opening hours nav at bottom left of main page)
 
 #book-online
