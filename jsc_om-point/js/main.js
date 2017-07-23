@@ -23,6 +23,16 @@
 //section
 //table
 //form
+    //datepicker
+$.datepicker.setDefaults({
+  showOn: "both",
+  buttonImageOnly: true,
+  buttonImage: "calendar.gif",
+  buttonText: "Calendar"
+});
+$( "#datepicker" ).datepicker({
+  altField: "#actualDate"
+});
 //input
 //#contact (contact div)
 //.mainMenuItem (inside side navigation panel div) 
