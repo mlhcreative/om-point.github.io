@@ -9,10 +9,11 @@
 </head>
 <body class="bg">
    <div class="fullscreen-bg">
-    <video loop muted autoplay poster="css/images/om-point.png" class="fullscreen-bg__video"
-        src="css/video/om-point.mp4" type="video/mp4">
+    <video loop muted autoplay poster="css/images/om-point.png" src="css/video/om-point.mp4" type="video/mp4" class="fullscreen-bg">
     </video>
    </div>
+<!-- Uelement to open the sidenav -->
+<span onclick="openNav('#hamburger')">open</span>
 <div id="mySidenavMenu" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <nav><a href="#" class="mainMenuItem">About</a></nav>
@@ -21,8 +22,6 @@
   <nav><a href="#" class="mainMenuItem">Location</a></nav>
   <nav><a href="#" class="mainMenuItem">Contact</a></nav>
 </div>
-<!-- Uelement to open the sidenav -->
-<span onclick="openNav('#hamburger')">open</span>
 <!-- Add all page content inside this div - side nav to push page content to the right -->
 <div id="contact" class="sidenav">
 		<h1>CONTACT</h1>
@@ -47,18 +46,20 @@
 </div>
 <div id="main">
 <header class="clearfix">
-   	<img src="images/om-point_logo.png" alt="Om Point Logo" id="logo">
-   	<div class="container" id="hamburger" onclick="myFunction(this)">
-  <div class="bar1"></div>
-  <div class="bar2"></div>
-  <div class="bar3"></div>
-</div>
+   	<img src="css/images/om-point_logo.png" alt="Om Point Logo" id="logo">
+	<div class="container" id="hamburger" onclick="myFunction(this)">
+  		<div class="bar1"></div>
+ 		<div class="bar2"></div>
+  		<div class="bar3"></div>
+	</div>
 <h2 id="menu">Menu</h2>
 </header>
-<section class="main-transform" id="bookings">
-		<div id="form-part-1" class="clearfix">
+<section id="form" class="main-transform" class="bookings" class="clearfix">
+	<div class="bookings" id="form-title">
 			<h1>Reservations</h1>
 			<h3>Make a reservation:</h3>
+	</div>
+	<div class="bookings" id="form-part-1">
 			<p><br />First name</p>
 			<form>
     			<input type="text" placeholder="first name">
@@ -75,35 +76,36 @@
 			<form>
     			<input type="text" placeholder="email address">
 			</form>
-		</div>
-		<div id="form-part-2" class="clearfix">
+	</div>
+	<div class="bookings" id="form-part-2" class="clearfix">
 			<p><br />Room type</p>
 			<form>
     			<input type="text" placeholder="room type">
 			</form>
 			<p><br />Number of guests</p>
 			<form>
-    			<input type="text" placeholder="email address">
+    			<input type="text" placeholder="number of guests">
 			</form>
 			<p><br />Date</p>
-			<form>
-    			<input type="text" placeholder="email address">
+			<form id="00/00/00">
+    			<input type="text" placeholder="date">
 			</form>
-			<p><br />Time</p>
-			<form>
-    			<input type="text" placeholder="email address">
-			</form>
-			<form>
-    			<button>Confirm Booking</button>
-			</form>
-		</div>
+	</div>
+	<div class="bookings" id="confirm-booking" class="clearfix">
+    	<button>Confirm Booking</button>
+	</div>
 	</section>
 	<section id="gallery">
-		<p id="arrow-left">&#x219E;</p>
+		<h1>Gallery</h1>
+		<div>
+			<p id="arrow-left">&#x219E;</p>
+		</div>
 		<div class='img-container'>
-    		<img class='resize_fit_center' id='Om-Point-gallery' src="images/om-point.png" alt="Om Point" />
+    		<img class='resize_fit_center' id='Om-Point-gallery' src="css/images/om-point.png" alt="Om Point" />
     	</div>	
-    	<p id="arrow-right">&#x21A0;</p>
+    	<div>
+    		<p id="arrow-right">&#x21A0;</p>
+    	</div>
 	</section>
 	<section id="location">
 	<h1>LOCATION</h1>
@@ -132,8 +134,9 @@
 			<p>&copy;2016</p>
 		</div>
 	</footer>
-	</div
+	</div>
    <script src="js/jquery-3.1.0.js"></script>
+   <script src="js/jquery-ui-1.12.1.custom"></script>
    <script src="js/main.js"></script>
    <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnUH42EdyFySgvQD-yYOvjfHVK8EWx4Bg&callback=initMap"></script>
 </body>
