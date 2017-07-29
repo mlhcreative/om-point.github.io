@@ -36,6 +36,11 @@
 //#bookings (bookings section)
 //#form-part-1 (inside #bookings section. One form but seperated whole form into divs so can float side by side)
 //#form-part-2 (inside #bookings section. One form but seperated whole form into divs so can float side by side)
+var form = $(form).on('click', function (e) {
+  e.preventDefault();
+
+
+})
 //#gallery (gallery section)
 //#arrow-left & #arrow-right (arrows that will float (horizontally centered) either side of the gallery image)
 //.img-container (contains gallery images)

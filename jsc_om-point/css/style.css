@@ -28,11 +28,24 @@ body, html {
 /*  .bg
 (Background image) */
 .bg { 
-    background-image: url("images/om-point.png");
-    height: 100%; 
+    background: url("video/om-point.mp4");
+    width: auto;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+}
+.fullscreen-bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(images/om-point.png) no-repeat;
+  background-size: cover;
 }
 
 /*  header  */
@@ -76,14 +89,54 @@ h2{
 
 /*  section */
 section {
-  max-width: 25em;
+  max-width: 35em;
   margin: auto;
   padding:2em 2em 2em 2em;
   clear: both;
   position: relative;
 }
 
-/*div
+/* div #mySidenavMenu {
+display: block;
+}
+
+* {
+  column-gap: inherit;
+}
+
+#mySidenavMenu {
+  background: white;
+  position: fixed;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1100;
+}
+
+@media screen and (max-width: 1250px) and (min-width: 750px) {
+#mySidenavMenu {
+width: 40vw;
+transition: left 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.mobile-nav-visible #mySidenavMenu {
+top: 0px;
+}
+
+@media screen and (max-width: 1250px) and (min-width: 750px) {
+.mobile-nav-visible #mySidenavMenu {
+left: 60vw;
+}
+
+#mySidenavMenu .inner.faux-row-positioned-left-insert.faux-row-positioned-right-inset { 
+height: 100%;
+}
+
+@media screen and (max-width: 1250px) and (min-width: 750px) {
+.inner.faux-row-positioned-left-insert.faux-row-positioned-right-inset {
+  position: absolute;
+  left: 0px;
+  margin-right: 4vw;
+}
 /*  button  */
 button {
   font-family: "Roboto", sans-serif;
@@ -125,18 +178,18 @@ th {
 }
 
 /*  #mySidenavMenu 
-(side navigation panel div)
+(side navigation panel div) */
 
-.sidenav 
-(inside side navigation panel div. The navigation menu links) */
+/*.sidenav 
+/*(inside side navigation panel div. The navigation menu links)*/ 
 .sidenav {
     height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
+    width: 0; /* 0 width - change this with JavaScript  */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0;
     right: 0;
-    background-color: #ffffff; /*White*/
+    background-color: #ffffff; /*White */
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -151,13 +204,17 @@ th {
     display: block;
     transition: 0.3s
 }
+.sidenav h1 {
+  text-align: left;
+  font-weight: 400;
+}
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover, .offcanvas a:focus{
     color: #000000;
 }
 
-/*  a .closebtn 
-(inside side navigation panel div. Position and style the close button (top right corner) (linked) */
+/*  a .closebtn */
+/*(inside side navigation panel div. Position and style the close button (top right corner) (linked)*/ 
 .sidenav .closebtn {
     position: absolute;
     top: 0;
@@ -272,19 +329,34 @@ top: 0;
 (inside #bookings section. One form but seperated whole form into divs so can float side by side)
 
 #form-part-2
-(inside #bookings section. One form but seperated whole form into divs so can float side by side)
+(inside #bookings section. One form but seperated whole form into divs so can float side by side)*/
 
-#gallery
-(gallery section)
+#gallery {
+  max-width: 100%
+}
+/*(gallery section)
 
 #arrow-left & #arrow-right
-(arrows that will float (horizontally centered) either side of the gallery image)
+(arrows that will float (horizontally centered) either side of the gallery image)*/
+#arrow-left {
+  font-size: 30px;
+  display: block;
+  float: left;
+  text-align: center;
+  padding: 150px 0px 0px 600px;
+}
 
+#arrow-right {
+  font-size: 30px;
+  display: block;
+  float:right;
+  text-align: center;
+  padding: 150px 600px 0px 0px;
+}
 /*  .img-container
 (contains gallery images) */
 .img-container {
     margin: 5px;
-    width: 1050px;
     height: 300px;
     line-height: 115px;
     text-align: center;
@@ -301,12 +373,23 @@ top: 0;
 }
 
 /*#Om-Point-gallery
-(image inside gallery section will slide to the left new image will slide in as it slides out)
+(image inside gallery section will slide to the left new image will slide in as it slides out)*/
 
-#location
-(location section)
+/*#location {
+  max-width: ;
+}*/
 
-.sub-menu-nav
+th {
+  padding: 5px 35px 5px 5px;
+}
+
+td {
+  padding: 20px;
+}
+}
+
+
+/*.sub-menu-nav
 (sub-menu navigation items effect map)
 
 #map
@@ -357,15 +440,5 @@ footer {
 }
 
 /* media queries  */
-@media only screen and (min-width:320px) and (max-width:427px){
-.img-container{
-    margin: auto;
-    width: 200;
-    height: 200;
-}
-section {
-	margin: auto;
-	padding:auto;
-	}
-}
+
 
