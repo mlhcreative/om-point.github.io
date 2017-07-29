@@ -22,19 +22,20 @@
 </div>
 <h2 id="menu">Menu</h2>
 </header>
-<div id="mySidenavMenu" class="sidenav">
+<div class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <nav><a href="#" class="mainMenuItem"><h1>About</h1></a></nav>
-  <nav><a href="#" class="mainMenuItem"><h1>Accommodation</h1></a></nav>
-  <nav><a href="#" class="mainMenuItem"><h1>Gallery</h1></a></nav>
-  <nav><a href="#" class="mainMenuItem"><h1>Location</h1></a></nav>
-  <nav><a href="#" class="mainMenuItem"><h1>Contact</h1></a></nav>
+  	<section id="SidenavMenu" class="sidenav">
+  		<nav><a href="#" class="mainMenuItem"><h1>About</h1></a></nav>
+  		<nav><a href="#" class="mainMenuItem"><h1>Accommodation</h1></a></nav>
+  		<nav><a href="#" class="mainMenuItem"><h1>Gallery</h1></a></nav>
+  		<nav><a href="#" class="mainMenuItem"><h1>Location</h1></a></nav>
+ 		 <nav><a href="#" class="mainMenuItem"><h1>Contact</h1></a></nav>
+	</section>
 <!-- Uelement to open the sidenav -->
 <span onclick="openNav('#hamburger')"></span>
 <!-- Add all page content inside this div - side nav to push page content to the right -->
-<section id="contact" class="sidenav">
-		<h1>CONTACT</h1>
-		<button id="book-now">BOOK ONLINE</button><br /><br />
+	<section id="contact" class="sidenav" class="nav-footerButtonOnly">
+		<h3>CONTACT</h3>
 		<h2>OPENING HOURS</h2><br />
 		<h2>MONDAY - FRIDAY</h2>
 		<p>8:00am - 8:00pm</p><br />
@@ -47,9 +48,9 @@
 		<p><a href="mailto:ompointinfo@mail.com">ompointinfo@mail.com</p></a><br />
 		<p>123 Om Point Way, Om Point 1234</p><br />
 		<div id="mini-map"></div>
-</section>
-<section id="accommodation" class="sidenav">
-		<h1>ACCOMMODATION</h1><br />
+	</section>
+	<section id="accommodation" class="sidenav">
+		<h3>ACCOMMODATION</h3><br />
 		<br />
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -63,17 +64,17 @@
 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 		quis nostrud exercitation.</p><br />
 		<br />
-</section>
-<section id="nav-footer" class="sidenav">
+	</section>
+	<section id="nav-footer" class="sidenav">
 		<h2>&#x21E2; &nbsp;&nbsp;OPENING HOURS</h2><br />
 		<button id="book-now">BOOK ONLINE</button><br /><br />
-</section>
+	</section>
 </div>
 <div id="main">
 <section class="main-transform" id="bookings">
 		<div id="form-part-1" class="clearfix">
 			<h1>Reservations</h1>
-			<h3>Make a reservation:</h3>
+			<h2>Make a reservation:</h2>
 			<p><br />First name</p>
 			<form>
     			<input class="user-input" type="text" placeholder="First name">
