@@ -180,21 +180,28 @@ th {
   padding: 5px 65px 5px 5px;
 }
 
-/*  #mySidenavMenu 
-(side navigation panel div) */
+#mySidenavMenu {
+  right: 0;
+  width: 30%;
+  padding-left: 20px
+  z-index: 1;
+}
+/*(side navigation panel div) */
 
 /*.sidenav 
 /*(inside side navigation panel div. The navigation menu links)*/ 
 .sidenav {
     height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript  */
+  /* 0 width - change this with JavaScript  */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    z-index: -1; /* Stay on top */
     top: 0;
     right: 0;
+    width: 30%;
     background-color: #ffffff; /*White */
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
+    padding-top: 300px; /* Place content 60px from the top */
+    padding-left: 150px;
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
     transform: right;
 }
@@ -231,8 +238,13 @@ th {
     .sidenav a {font-size: 18px;}
 }
 
-/*#contact 
-(contact div)
+#nav-footer {
+top: 60%;
+}
+.sidenav #nav-footer h2 {
+  text-align: left;
+}
+/*(contact div)
 
 .mainMenuItem 
 (inside side navigation panel div) 
@@ -401,7 +413,6 @@ td {
   width: 75%;
   height: 500px;
   margin: 0 auto;
-  top: 0;
   z-index: 1;
 }
 
