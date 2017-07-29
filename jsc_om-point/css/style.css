@@ -28,11 +28,11 @@ body, html {
 /*  .bg
 (Background image) */
 .bg { 
-    background: url("video/om-point.mp4");
     width: auto;
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .fullscreen-bg {
   position: fixed;
   top: 50%;
@@ -47,6 +47,9 @@ body, html {
   background: url(images/om-point.png) no-repeat;
   background-size: cover;
 }
+video {
+  width: 100%;
+}
 
 /*  header  */
 header{
@@ -56,7 +59,7 @@ header{
   padding: 2%;
   width:100%;
   top: 0;
-  z-index:1;
+  z-index: 1;
 }
 
 /*  nav */
@@ -356,7 +359,7 @@ top: 0;
 /*  .img-container
 (contains gallery images) */
 .img-container {
-    margin: 5px;
+    margin: auto;
     height: 300px;
     line-height: 115px;
     text-align: center;
