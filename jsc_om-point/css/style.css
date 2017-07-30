@@ -78,7 +78,7 @@ h1 {
 }
 
 /*  h2  */
-h2{
+h2 {
   font-family: 'Raleway', sans-serif; 
   font-size: 1.5em;
   font-weight: 100;
@@ -101,7 +101,7 @@ h3 {
 
 /*  section */
 section {
-  max-width: 35em;
+  max-width: 100%;
   margin: auto;
   padding:2em 2em 2em 2em;
   clear: both;
@@ -199,13 +199,29 @@ th {
     position: fixed; /* Stay in place */
     z-index: -2; /* Stay on top */
     top: 0;
-    right: 0;
+    right: -1350px;
     width: 30%;
     background-color: #ffffff; /*White */
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 300px; /* Place content 60px from the top */
     padding-left: 150px;
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    transform: right;
+}
+/* open sidenav when user click hamburger icon 
+.open-sidenav {
+    height: 100%; /* 100% Full-height 
+  /* 0 width - change this with JavaScript  
+    position: fixed; /* Stay in place 
+    z-index: -2; /* Stay on top 
+    top: 0;
+    right: 0px;
+    width: 30%;
+    background-color: #ffffff; /*White 
+    overflow-x: hidden; /* Disable horizontal scroll 
+    padding-top: 300px; /* Place content 60px from the top 
+    padding-left: 150px;
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav 
     transform: right;
 }
 /*  side nav links */
@@ -263,6 +279,14 @@ text-align: center;
 padding: 35px;
 }
 
+#about {
+  z-index: -5;
+}
+
+#about p {
+  padding: 35px;
+}
+
 #nav-footer {
 top: 60%;
 z-index: 0;
@@ -272,13 +296,17 @@ z-index: 0;
   text-align: left;
 }
 
+/* back to the menu 
+
 .backToMenu {
 z-index: -2;
 }
 
 .Selected {
-  z-index: -1;
+  z-index: -2;
 }
+
+hide opening hours
 .nav-footerButtonOnly {
 visibility: hidden;
 }
@@ -301,10 +329,84 @@ visibility: hidden;
 (main page contents to be pushed left by side navigation panel. Styles page content - push the page content to the left when you open the side navigation) */
 
 #main {
-    transition: margin-left .5s;
     padding: 20px;
+    padding-top: 500px;
+    height: 100%;
 }
 
+nav #footermenu {
+  font-family: 'Raleway', sans-serif; 
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: #D3D3D3;
+}
+/* class for when user selects book online form 
+#mainShiftLeft {
+    padding: 20px;
+    padding-top: 500px;
+    max-width: 90em;
+}
+
+.bg-Changeout { 
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fullscreen-bg-Changeout {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url("https://farm6.staticflickr.com/5468/17079563764_84afb38569_b.jpg") no-repeat;
+  background-size: cover;
+}
+
+.fullscreen-bg__video-Changeout {
+visibility: hidden;
+}
+
+/* class for when user selects gallery or location #main becomes #mainShiftLeft and background becomes white 
+#mainShiftLeft {
+    padding: 20px;
+    padding-top: 500px;
+    max-width: 90em;
+}
+
+.bg-Changeout { 
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fullscreen-bg-noColor {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: white;
+  background-size: cover;
+}
+
+.fullscreen-bg__video-noColor {
+visibility: hidden;
+}
 /*.main-transform
 (inside #main div these are blocks that will be shown or hidden depending on event) (id unique to section ie. main-transform-bookings)
 
@@ -319,10 +421,6 @@ visibility: hidden;
 }
 /*.container
 (contain hamburger menu icon inside header) */
-header {
-  z-index: -1;
-}
-
 
 .container {
     display: inline-block;
@@ -377,40 +475,64 @@ top: 0;
 (bookings section)  */
 #bookings {
   display: block;
-  float: left;
   margin: auto;
   padding: 30px;
+  width: 100%;
   max-width: 100%;
   float: center;
+  position: absolute;
 }
 
-/*#form-part-1
-(inside #bookings section. One form but seperated whole form into divs so can float side by side)
+#form-part-1 {
+float: left;
+left: 45em;
+width: 600px;
+margin: auto;
+padding: 50px;
+position: absolute;
+}
 
-#form-part-2
-(inside #bookings section. One form but seperated whole form into divs so can float side by side)*/
+/*(inside #bookings section. One form but seperated whole form into divs so can float side by side)*/
 
+#form-part-2{
+float: left;
+left: 60em;
+width: 600px;
+margin: auto;
+padding: 50px;
+position: absolute;
+}
+/*(inside #bookings section. One form but seperated whole form into divs so can float side by side)*/
+
+/*(gallery section)*/
 #gallery {
-  max-width: 100%
+  display: block;
+  margin: auto;
+  padding: 30px;
+  width: 100%;
+  max-width: 100%;
+  float: center;
+  position: absolute;
 }
-/*(gallery section)
 
-#arrow-left & #arrow-right
+/* #arrow-left & #arrow-right
 (arrows that will float (horizontally centered) either side of the gallery image)*/
 #arrow-left {
   font-size: 30px;
   display: block;
   float: left;
-  text-align: center;
-  padding: 150px 0px 0px 600px;
+  width: 40em;
+  text-align: right;
+  padding: 150px 0px 0px 0px;
 }
 
 #arrow-right {
   font-size: 30px;
   display: block;
   float:right;
-  text-align: center;
-  padding: 150px 600px 0px 0px;
+  width: 40em;
+  text-align: left;
+  padding: 150px 0px 0px 0px;
 }
 /*  .img-container
 (contains gallery images) */
@@ -434,16 +556,24 @@ top: 0;
 /*#Om-Point-gallery
 (image inside gallery section will slide to the left new image will slide in as it slides out)*/
 
-/*#location {
-  max-width: ;
-}*/
+#location {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  position: absolute;
+}
+table {
+  max-width: 100%;
+  width: 100%;
+  padding-top: 35px;
+}
 
 th {
-  padding: 5px 35px 5px 5px;
+  padding: 5px 15px 5px 5px;
 }
 
 td {
-  padding: 20px;
+  max-width: 1.5em;
 }
 }
 
@@ -460,11 +590,29 @@ td {
   z-index: 1;
 }
 
-/*  #hours
-(opening hours nav at bottom left of main page)
+#footer-menu {
+  max-width: 100%;
+  width: 100%;
+}
 
-#book-online
-(bookings nav at bottom left of main page)
+/*(opening hours nav at bottom left of main page)*/
+#hours{
+  display: block;
+  float: left;
+  margin: auto;
+  width: 50%;
+  text-align: left;
+}
+
+#book-online {
+  display: block;
+  float: left;
+  margin: auto;
+  width: 50%;
+  text-align: right;
+}
+
+/*(bookings nav at bottom left of main page)
 
 #social
 (social media buttons (images))
