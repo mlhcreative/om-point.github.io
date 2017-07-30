@@ -179,15 +179,6 @@ input {
 }
 
 /*  table   */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  padding: 30px;
-  max-width: 100%;
-}
-th {
-  padding: 5px 65px 5px 5px;
-}
 
 /*(side navigation panel div) */
 
@@ -330,11 +321,11 @@ visibility: hidden;
 
 #main {
     padding: 20px;
-    padding-top: 500px;
-    height: 100%;
+    padding-top: 10%;
+    height: 75%;
 }
 
-nav #footermenu {
+nav a {
   font-family: 'Raleway', sans-serif; 
   font-size: 1.5em;
   font-weight: 400;
@@ -538,8 +529,8 @@ position: absolute;
 (contains gallery images) */
 .img-container {
     margin: auto;
-    height: 300px;
-    line-height: 115px;
+    max-width: 100%;
+    height: 100%;
     text-align: center;
     border: 1px solid none;
     position: relative;
@@ -562,19 +553,23 @@ position: absolute;
   width: 100%;
   position: absolute;
 }
-table {
-  max-width: 100%;
-  width: 100%;
-  padding-top: 35px;
+
+#location nav a {
+  color: black;
 }
 
-th {
-  padding: 5px 15px 5px 5px;
+table {
+  display: block;
+  width: 35%;
+  padding-right: 35px;
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 td {
-  max-width: 1.5em;
-}
+  max-width: 100%;
+  padding-right: 3em;
 }
 
 
@@ -584,11 +579,26 @@ td {
 #map
 (map inside location section. Updates depending on which sub-menu item user clicks - markers and color change)  */
 #map {
-  width: 75%;
-  height: 500px;
+  display: block;
+  width: 35%;
+  height: 100%;
   margin: 0 auto;
   z-index: 1;
+  position: absolute;
 }
+
+.gallery-hide {
+z-index: -101;
+}
+
+.location-hide {
+z-index: -101;
+}
+
+.bookings-hide {
+z-index: -101;
+}
+
 
 #footer-menu {
   max-width: 100%;
@@ -602,6 +612,7 @@ td {
   margin: auto;
   width: 50%;
   text-align: left;
+  font-size: 2em;
 }
 
 #book-online {
@@ -610,6 +621,7 @@ td {
   margin: auto;
   width: 50%;
   text-align: right;
+  font-size: 2em;
 }
 
 /*(bookings nav at bottom left of main page)
