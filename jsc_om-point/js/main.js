@@ -81,6 +81,24 @@ var hamburger = function myFunction(x) {
 //when user selects one of the 4 map sub headings markers for selected sub heading appear for the area surroding the B&B
   //.sub-menu-nav(sub-menu navigation items effect map)
   //#map (map inside location section. Updates depending on which sub-menu item user clicks - markers and color change)
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -36.848629, lng: 174.737587},
+    zoom: 8,
+    zoomControl: false,
+    fullScreenControl: true,
+    styles: styles
+
+    var marker = new google.mapsMarker ( {
+      position: {lat: -36.848629, lng: 174.737587},
+      map: map
+    });
+
+});
+  
+}
+
 var styles = [
 stylers: [
 { hue: '#8080ff' },
@@ -101,24 +119,6 @@ stylers: [
   ]
    }
 ];
-
-function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 40.8054491, lng: -73.9654415},
-    zoom: 8,
-    zoomControl: false,
-    fullScreenControl: true,
-    styles: styles
-
-    var marker = new google.mapsMarker ( {
-      position: {lat: 40.8054491, lng: -73.9654415},
-      map: map
-    });
-  });
-}
-
-
-
 
 
 
