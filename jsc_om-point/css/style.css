@@ -521,6 +521,7 @@ padding-top: 50%;
   max-width: 100%;
   float: center;
   position: absolute;
+  z-index: 
 }
 
 /* #arrow-left & #arrow-right
@@ -529,7 +530,7 @@ padding-top: 50%;
   font-size: 30px;
   display: block;
   float: left;
-  width: 40em;
+  width: 25%;
   text-align: right;
   padding: 150px 0px 0px 0px;
 }
@@ -538,7 +539,7 @@ padding-top: 50%;
   font-size: 30px;
   display: block;
   float:right;
-  width: 40em;
+  width: 25%;
   text-align: left;
   padding: 150px 0px 0px 0px;
 }
@@ -675,5 +676,35 @@ footer {
 }
 
 /* media queries  */
+@media only screen and (min-width:515px) and (max-width:2010px){
+  #form table {
+    max-width: 60%;
+  }
 
+}
+@media only screen and (min-width:226px) and (max-width:1024px){
+  #main{
+    padding-top: 15%;
+  }
+
+  #form table{
+    max-width: 90%;
+  }
+
+  #arrow-left #arrow-right {
+    width: 10%;
+  }
+
+}
+@media only screen and (min-width:226px) and (max-width:768px){
+  #form table {
+    max-width: 100%;
+    padding: 1em;
+  }
+  #gallery {
+    width: 100%;
+  }
+}
+@media only screen and (min-width:465px) and (max-width:1440px){
+}
 
