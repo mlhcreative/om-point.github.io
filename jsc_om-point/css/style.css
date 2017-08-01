@@ -510,6 +510,26 @@ padding-top: 50%;
   position: absolute;
 }
 
+#gallery-1 {
+  display: block;
+  margin: auto;
+  padding: 30px;
+  width: 100%;
+  max-width: 100%;
+  float: center;
+  position: absolute;
+}
+
+#gallery-2 {
+  display: block;
+  margin: auto;
+  padding: 30px;
+  width: 100%;
+  max-width: 100%;
+  float: center;
+  position: absolute;
+}
+
 /* #arrow-left & #arrow-right
 (arrows that will float (horizontally centered) either side of the gallery image)*/
 #arrow-left {

@@ -120,7 +120,7 @@ var accommodationSelect = $('#accommodation').on('click', function() {
 
    }
 
-  functionhideMainMenuSideNav(); 
+  hideMainMenuSideNav(); 
 
 });
 
@@ -188,9 +188,6 @@ var exitGalleryHamburger = $('#hamburger-icon').on('click', function() {
 
   $('video').removeClass('fullscreen-bg_video-noColor');
 
-  if (($('#hamburger-icon').ondblclick) === true) {
-    console.log(exitSideNav);
-  } else {
     openNav();
   }
 
@@ -204,20 +201,24 @@ var exitGalleryHamburger = $('#hamburger-icon').on('click', function() {
 //add class .fullscreen-bg_video-noColor to video
 //add class .sidenav
 //remove class .location-hide
-//user clicks .sub-menu-nav items (TRANSPORT, ENTERTAINMENT, RECREATION, SURF-PICKS) map. Markers are displayed on the map.
+//user clicks .sub-menu-nav items (TRANSPORT, ENTERTAINMENT, RECREATION, SURF-PICKS) map. Markers are displayed on the map. create an array?
+var locationSelected = $('#location').on('click', function () {
 
-  //user clicks logo to leave 'LOCATION'
-  //page restore to first load appearance
-  //add class .location-hide to #location
-  //remove class .fullscreen-bg-noColor from first body div where video is stored add class .fullscreen-bg
-  //remove class .fullscreen-bg_video-noColor from video
+hideMainMenuSideNav (); 
 
-  //user clicks menu hamburger icon to escape 'LOCATION'
-  //page restore to first load appearance with side nav
-  //Call option 2. function if user double clicks call option 3. function
-  //remove class .fullscreen-bg-noColor from first body div where video is stored add class .fullscreen-bg
-  //remove class .fullscreen-bg_video-noColor from video
+  $('#nav-footer').addClass('hide-menu-item').addClass('navSlide-full');
 
+  $('#video').removeClass('fullscreen-bg').addClass('fullscreen-bg-noColor');
+
+  $('video').addClass('fullscreen-bg_video-noColor');
+
+  closeNav();
+
+  $('#location').removeClass('#location-hide');
+
+});
+
+//map
 var styles = [
 stylers: [
 { hue: '#8080ff' },
@@ -254,6 +255,38 @@ function initMap() {
   });
 }
 
+  //user clicks logo to leave 'LOCATION'
+  //page restore to first load appearance
+  //add class .location-hide to #location
+  //remove class .fullscreen-bg-noColor from first body div where video is stored add class .fullscreen-bg
+  //remove class .fullscreen-bg_video-noColor from video
+var exitLocationLogo = $('#logo').on('click', function() {
+
+  $('#location').addClass('location-hide');
+
+  $('#video').removeClass('ullscreen-bg-noColor').removeClass('fullscreen-bg');
+
+  $('video').removeClass('fullscreen-bg_video-noColor');
+
+});
+  //user clicks menu hamburger icon to escape 'LOCATION'
+  //page restore to first load appearance with side nav
+  //Call option 2. function if user double clicks call option 3. function
+  //remove class .fullscreen-bg-noColor from first body div where video is stored add class .fullscreen-bg
+  //remove class .fullscreen-bg_video-noColor from video
+var exitGalleryHamburger = $('#hamburger-icon').on('click', function() {
+
+  $('#location').addClass('location-hide');
+
+  $('#video').removeClass('ullscreen-bg-noColor').removeClass('fullscreen-bg');
+
+  $('video').removeClass('fullscreen-bg_video-noColor');
+
+    openNav();
+
+});
+
+//potential add surf report if hear back about api key in time
 //$.ajax ( {
   //type: "GET",
   //url: 'http://magicseaweed.com/api/YOURAPIKEY/forecast/?Piha-Surf-Report/90/',
@@ -261,7 +294,7 @@ function initMap() {
     //console.log(response);
   //},
   //complete: function () {
-  //$('#surf-report' 'div').html("As of " + 2017-07-07);
+  //$('#surf-report' 'div')....
   //}
 //});
 
@@ -273,7 +306,17 @@ function initMap() {
       //add class .nav-footerButtonOnly to #nav-footer h2
 //user can email directly by clicking email address
   //user can click either menu hamburger-icon or logo to escape 'CONTACT'
+var contactSelect = $('#contact').on('click', function() {
+  
+    $('#contact').addClass('selected');
 
+    $('#nav-footer h2').addClass('nav-footerButtonOnly');
+
+   }
+
+  hideMainMenuSideNav(); 
+
+});
 
 //user clicks 'OPENING HOURS'
 //side nav menu is hidden and contact items are displayed in the side nav
@@ -283,7 +326,9 @@ function initMap() {
       //add class .nav-footerButtonOnly to #nav-footer h2
 //user can email directly by clicking email address
   //user can click either menu hamburger-icon or logo to escape 'CONTACT'
-
+var openingHoursSelect = $('#opening-hours').on('click', function() {
+console.log (contactSelect);
+});
 
 //user clicks 'BOOK ONLINE' button
 //Side nav is hidden and video changes to an image. Booking form (#bookings) items appear
@@ -293,7 +338,23 @@ function initMap() {
 //add class .fullscreen-bg_video-Changeout to video
 //add class .sidenav
 //remove class .bookings-hide from #bookings
+var bookOnlineButton = $('#book-now').on('click', function () {
 
+hideMainMenuSideNav (); 
+
+  $('#nav-footer').addClass('hide-menu-item').addClass('navSlide-full');
+
+  $('#video').removeClass('fullscreen-bg').addClass('fullscreen-bg-Changeout');
+
+  $('video').addClass('fullscreen-bg_video-Changeout');
+
+  closeNav();
+
+  $('#bookings').removeClass('#bookings-hide');
+
+});
+
+//add and store bookings using firebase database
 $('#form').on('submit', function(e) {
 e.preventDefault ();
 
@@ -308,7 +369,7 @@ e.preventDefault ();
       $('#time').val(), 
       $('#comments').val();
   }
-
+//do these need to be housed seperately?
       $('#firstName').val('')
   var firstNameReference = database.ref ('comments');
     commentsReference.push ({
@@ -356,7 +417,7 @@ e.preventDefault ();
       comments: userInput,
   })
 });
-
+//can i do one for all? How?
 function getComments() {
   database.ref('comments').on('value', function (results) {
     var lastComment = results.val();
@@ -388,8 +449,13 @@ getComments();
 //Option 4.
 //user clicks 'OPENING HOURS' on the main page
 //side nav opens and contact items are displayed. Call contact function.
+$('#hours').on('click', function (){
 
+console.log(openSideNav);
 
+console.log (contactSelect);
+
+});
 
 //Option 5.
 //user clicks 'BOOK ONLINE' on the main page
@@ -397,7 +463,11 @@ getComments();
 //remove class .fullscreen-bg and add class .fullscreen-bg-Changeout to first body div where video is stored
 //add class .fullscreen-bg_video-Changeout to video
 //remove class .bookings-hide from #bookings
+$('book-online').on('click', function (){
 
+  console.log (bookOnlineButton);
+  
+});
 
 
 //Option 6.
