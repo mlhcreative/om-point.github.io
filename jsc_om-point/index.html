@@ -8,31 +8,29 @@
    <meta name="viewport" content="width=device-width, initial scale=1">
 </head>
 <body class="bg">
-<div class="fullscreen-bg">
+<div id="video" class="fullscreen-bg">
     <video loop muted autoplay poster="css/images/om-point.png" class="fullscreen-bg__video">
         <source src="css/video/om-point.mp4" type="video/mp4">
     </video>
 </div>
 <header class="clearfix">
    	<img src="css/images/om-point_logo.png" alt="Om Point Logo" id="logo">
-   	<div class="container" id="hamburger" onclick="myFunction(this)">
+   	<div class="container" id="hamburger-icon">
   <div class="bar1"></div>
   <div class="bar2"></div>
   <div class="bar3"></div>
 </div>
 <h2 id="menu">Menu</h2>
 </header>
-<div class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<div id ="sideNav" class="sidenav">
   	<section id="SidenavMenu" class="sidenav">
   		<nav><a href="#" class="mainMenuItem"><h1>About</h1></a></nav>
   		<nav><a href="#" class="mainMenuItem"><h1>Accommodation</h1></a></nav>
   		<nav><a href="#" class="mainMenuItem"><h1>Gallery</h1></a></nav>
   		<nav><a href="#" class="mainMenuItem"><h1>Location</h1></a></nav>
- 		 <nav><a href="#" class="mainMenuItem"><h1>Contact</h1></a></nav>
+ 		<nav><a href="#" class="mainMenuItem"><h1>Contact</h1></a></nav>
 	</section>
 <!-- Uelement to open the sidenav -->
-<span onclick="openNav('#hamburger')"></span>
 <!-- Add all page content inside this div - side nav to push page content to the right -->
 	<section id="about" class="sidenav">
 		<h3 a href="#">ABOUT</h3></a><br />
@@ -64,7 +62,7 @@
 		<br />
 	</section>
 		<section id="contact" class="sidenav" class="nav-footerButtonOnly">
-		<h3 a href="#">CONTACT</h3></a>
+		<nav><h3 a href="#">CONTACT</h3></a></nav>
 		<h2>OPENING HOURS</h2><br />
 		<h2>MONDAY - FRIDAY</h2>
 		<p>8:00am - 8:00pm</p><br />
@@ -78,54 +76,58 @@
 		<p>123 Om Point Way, Om Point 1234</p><br />
 	</section>
 	<section id="nav-footer" class="sidenav">
-		<h2>&#x21E2; &nbsp;&nbsp;<a href="#">OPENING HOURS</a></h2><br />
+		<h2><nav><a href="#">&#x21E2; &nbsp;&nbsp; OPENING HOURS</a></nav></h2><br />
 		<button a href="#" id="book-now">BOOK ONLINE</button></a></section><br /><br />
 	</section>
 </div>
 <div id="main">
-<section class="main-transform" id="bookings">
+<section id="bookings">
 			<h1>Reservations</h1>
 			<h2>Make a reservation:</h2>
 	<section id="form">
-		<div id="form-part-1" class="main-transform" class="clearfix">
-			<p><br />First name</p>
+		<div id="form-part-1" class="clearfix">
+			<p><br />First Name</p>
 			<form>
-    			<input class="user-input" type="text" placeholder="First name">
+    			<input id="firstName" class="user-input" type="text" placeholder="First name">
 			</form>
-			<p><br />Last name</p>
+			<p><br />Last Name</p>
 			<form>
-    			<input class="user-input"  type="text" placeholder="Last name">
+    			<input id="lastName" class="user-input"  type="text" placeholder="Last name">
 			</form>
 			<p><br />Phone number</p>
 			<form>
-    			<input class="user-input"  type="text" placeholder="Phone number">
+    			<input id="phone" class="user-input"  type="text" placeholder="Phone number">
 			</form>
 			<p><br />Email address</p>
 			<form>
-    			<input class="user-input"  type="text" placeholder="Email address">
+    			<input id="email" class="user-input"  type="text" placeholder="Email address">
 			</form>
 		</div>
 		<div id="form-part-2" class="clearfix">
 			<p><br />Room type</p>
 			<form>
-    			<input class="user-input"  type="text" placeholder="Room type">
+    			<input id="room" class="user-input"  type="text" placeholder="Room type">
 			</form>
 			<p><br />Number of guests</p>
 			<form>
-    			<input class="user-input"  type="text" placeholder="No. of Guests">
+    			<input id="guests" class="user-input"  type="text" placeholder="No. of Guests">
 			</form>
 			<p><br />Date</p>
 			<form>
-    			<input class="user-input" type="text" placeholder="Date">
+    			<input id="date" class="user-input" type="text" placeholder="Date">
 			</form>
 			<p><br />Time</p>
 			<form>
-    			<input class="user-input" type="text" placeholder="Time">
+    			<input id="time" class="user-input" type="text" placeholder="Time">
+			</form>
+			<p><br />Comments</p>
+			<form>
+    			<input id="comments" class="user-input" type="text" placeholder="Thoughts?">
 			</form>
 		</div>
 		<div id="confirm-booking-button">
 			<form>
-    			<button id="confirm-booking">Confirm Booking</button>
+    			<button type="submit" id="confirm-booking">Confirm Booking</button>
 			</form>
 		</div>
 	</section>
@@ -137,6 +139,30 @@
 					<p>&#x219E;</p>
 				</div>
     			<img class='resize_fit_center' id='Om-Point-gallery' src="css/images/om-point.png" alt="Om Point" />
+    			<div id="arrow-right">
+    				<p>&#x21A0;</p>
+    			</div>
+    		</div>	
+	</section>
+	<section id="gallery-1">
+		<h1>GALLERY</h1>
+			<div class='img-container'>
+				<div id="arrow-left">
+					<p>&#x219E;</p>
+				</div>
+    			<img class='resize_fit_center' id='Om-Point-gallery' src="css/images/bed.jpg" alt="Om Point room" />
+    			<div id="arrow-right">
+    				<p>&#x21A0;</p>
+    			</div>
+    		</div>	
+	</section>
+	<section id="gallery-2">
+		<h1>GALLERY</h1>
+			<div class='img-container'>
+				<div id="arrow-left">
+					<p>&#x219E;</p>
+				</div>
+    			<img class='resize_fit_center' id='Om-Point-gallery' src="css/images/bed_breakfast_single.jpg" alt="Om Point breakfast" />
     			<div id="arrow-right">
     				<p>&#x21A0;</p>
     			</div>
@@ -159,6 +185,7 @@
 			</th>
 		</table>
 		<div id="map"></div>
+		<div id="surf-report"></div>
 	</section>
 	</div>
     <footer>
@@ -178,7 +205,32 @@
 			<p>&copy;2016</p>
 		</div>
 	</footer>
-	</div>
+	</div>	
+	<script id = "booking-template" type="text/handlebars-template">
+		<li data-id = "{{firstNameId}}">
+		<p>{{firstName}}</p>
+		<li data-id = "{{firstNameId}}">
+		<p>{{lastName}}</p>
+		<li data-id = "{{lastNameId}}">
+		<p>{{comment}}</p>
+		<li data-id = "{{phoneId}}">
+		<p>{{phone}}</p>
+		<li data-id = "{{emailId}}">
+		<p>{{email}}</p>
+		<li data-id = "{{guestsId}}">
+		<p>{{guests}}</p>
+		<li data-id = "{{roomId}}">
+		<p>{{room}}</p>
+		<li data-id = "{{dateId}}">
+		<p>{{date}}</p>
+		<li data-id = "{{timeId}}">
+		<p>{{time}}</p>
+		<li data-id = "{{comments}}">
+		<p>{{comment}}</p>
+		<i class="fa fa-trash delete"></i>
+		</li>
+	</script>
+	<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
    <script src="js/jquery-3.2.1.js"></script>
    <script type="js/handlebars-v4.0.5.js"></script>
    <script src="js/main.js"></script>

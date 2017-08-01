@@ -202,21 +202,24 @@ input {
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
     transform: right;
 }
-/* open sidenav when user click hamburger icon 
 .open-sidenav {
-    height: 100%; /* 100% Full-height 
-  /* 0 width - change this with JavaScript  
-    position: fixed; /* Stay in place 
-    z-index: -2; /* Stay on top 
+    height: 100%; /* 100% Full-height /* 
+    0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: -2; /* Stay on top */
     top: 0;
     right: 0px;
     width: 30%;
-    background-color: #ffffff; /*White 
-    overflow-x: hidden; /* Disable horizontal scroll 
-    padding-top: 300px; /* Place content 60px from the top 
+    background-color: #ffffff; /*White */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 300px; /* Place content 60px from the top */
     padding-left: 150px;
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav 
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
     transform: right;
+}
+
+.sideNav-Full {
+  width: 100%;
 }
 /*  side nav links */
 .sidenav a {
@@ -290,17 +293,17 @@ z-index: 0;
   text-align: left;
 }
 
-/* back to the menu 
-
-.backToMenu {
-z-index: -2;
-}
+/* back to the menu */
 
 .Selected {
   z-index: -2;
 }
 
-hide opening hours
+.hide-menu-item {
+  z-index: -4;
+}
+
+/*hide opening hours */
 .nav-footerButtonOnly {
 visibility: hidden;
 }
@@ -338,17 +341,12 @@ nav a {
   text-decoration: none;
   color: #D3D3D3;
 }
-/* class for when user selects book online form 
-#mainShiftLeft {
-    padding: 20px;
-    padding-top: 500px;
-    max-width: 90em;
+/* class for when user selects book online form */
+.main-transform {
+    left: -15%;
 }
-
-.bg-Changeout { 
-    width: auto;
-    background-position: center;
-    background-repeat: no-repeat;
+.arrow-mainTransform {
+width: 10%;
 }
 
 .fullscreen-bg-Changeout {
@@ -371,17 +369,6 @@ visibility: hidden;
 }
 
 /* class for when user selects gallery or location #main becomes #mainShiftLeft and background becomes white 
-#mainShiftLeft {
-    padding: 20px;
-    padding-top: 500px;
-    max-width: 90em;
-}
-
-.bg-Changeout { 
-    width: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
 .fullscreen-bg-noColor {
   position: fixed;
@@ -424,7 +411,7 @@ visibility: hidden;
 
 /*  #hamburger
 (hamburger menu icon inside header) */
-#hamburger {
+#hamburger-icon {
   float: right;
   padding: 0.5%;
   margin: 0% 0% 1.5% 0%;
@@ -513,7 +500,7 @@ padding-top: 50%;
 /*(inside #bookings section. One form but seperated whole form into divs so can float side by side)*/
 
 /*(gallery section)*/
-#gallery {
+#gallery #gallery-1 #gallery-2 {
   display: block;
   margin: auto;
   padding: 30px;
@@ -521,7 +508,6 @@ padding-top: 50%;
   max-width: 100%;
   float: center;
   position: absolute;
-  z-index: 
 }
 
 /* #arrow-left & #arrow-right
@@ -560,6 +546,13 @@ padding-top: 50%;
     max-width:100%;
     max-height:100%;
     vertical-align: middle;
+}
+
+.img-slide-in {
+  right: 0%;
+}
+.img-slide-out {
+  left: 100%;
 }
 
 /*#Om-Point-gallery
@@ -604,7 +597,7 @@ td {
 }
 
 .gallery-hide {
-z-index: -101;
+left: -100%;
 }
 
 .location-hide {
@@ -619,6 +612,7 @@ z-index: -101;
 #footer-menu {
   max-width: 100%;
   width: 100%;
+  z-index: -3;
 }
 
 /*(opening hours nav at bottom left of main page)*/
