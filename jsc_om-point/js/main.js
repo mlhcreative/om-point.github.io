@@ -256,7 +256,7 @@ var styles = [
 ];
 
 function initMap() {
-    map = new google.maps.Map(document.getElementById("#map"), {
+    map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -36.848629, lng: 174.737587},
     zoom: 8,
     zoomControl: false,

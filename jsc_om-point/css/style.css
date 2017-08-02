@@ -599,7 +599,10 @@ td {
 (map inside location section. Updates depending on which sub-menu item user clicks - markers and color change)  */
 
 #map {
-    height: 100px;
+    height: 20em;
+    max-width: 100%
+    width: 35%
+    left:25%;
   }
 
 
