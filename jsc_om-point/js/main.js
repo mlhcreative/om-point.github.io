@@ -15,7 +15,7 @@ var database = firebase.database();
 /* Set the width of the side navigation to -1350 */
 function openNav() {
 
-      $(".sidenav").removeClass("sidenav").addClass("open-sidenav");
+      $(".sidenav").addClass("open-sidenav");
 
       $("#main").addClass("main-transform");
 
@@ -35,7 +35,7 @@ function openNav() {
 /* Set the width of the side navigation to 0 */
 function closeNav() {
 
-      $(".sidenav").removeClass("open-sidenav").addClass("sidenav");
+      $(".sidenav").addClass("sidenav");
 
       $("#main").removeClass("main-transform");
 
@@ -54,11 +54,11 @@ function closeNav() {
 //Page loads
 //Clickable: Logo, menu hamburger icon, "OPENING HOURS", "BOOK ONLINE", Social buttons
 //function for hiding main menu in Side nav
-var hideMainMenuSideNav = function noMenuNav() {
+function hideMainMenuSideNav() {
 
   $('#SidenavMenu').addClass('hide-menu-item');
 
-};
+}
 //option 1.
 //User clicks logo
 //page refreshes
@@ -82,8 +82,8 @@ var openSideNav = $('#hamburger-icon').on('click', function (e) {
 
       $('footer').addClass("main-transform");
   });
-/* Set the width of the side navigation to 0 */
-    closeNav();
+
+
   
 
 //Option 3.
@@ -96,10 +96,12 @@ var openSideNav = $('#hamburger-icon').on('click', function (e) {
 var exitSideNav = $("#hamburger-icon").on('dblclick', function(){
 
     $('#hamburger-icon div').removeClass("change");
-  });
+
     closeNav();
 
+    $('footer').removeClass("main-transform");
 
+  });
 
 //Side nav open:
 //user clicks 'ABOUT'
@@ -110,10 +112,11 @@ var exitSideNav = $("#hamburger-icon").on('dblclick', function(){
 var aboutSelect = $('#about').on('click', function() {
 
     $('#about').addClass('selected');
+
+    hideMainMenuSideNav(); 
   
   });
 
-  hideMainMenuSideNav(); 
 
 
 
@@ -126,9 +129,9 @@ var accommodationSelect = $('#accommodation').on('click', function() {
   
     $('#accommodation').addClass('selected');
 
-   });
+    hideMainMenuSideNav(); 
 
-  hideMainMenuSideNav(); 
+  });
 
 
 
@@ -337,7 +340,7 @@ var contactSelect = $('#contact').on('click', function() {
 //user can email directly by clicking email address
   //user can click either menu hamburger-icon or logo to escape 'CONTACT'
 var openingHoursSelect = $('#opening-hours').on('click', function() {
-console.log (contactSelect);
+contactSelect();
 });
 
 //user clicks 'BOOK ONLINE' button
@@ -435,9 +438,9 @@ getComments();
 //side nav opens and contact items are displayed. Call contact function.
 $('#hours').on('click', function (){
 
-console.log(openSideNav);
+openSideNav()
 
-console.log (contactSelect);
+contactSelect()
 
 });
 
@@ -449,7 +452,7 @@ console.log (contactSelect);
 //remove class .bookings-hide from #bookings
 $('book-online').on('click', function (){
 
-  console.log (bookOnlineButton);
+bookOnlineButton()
   
 });
 
