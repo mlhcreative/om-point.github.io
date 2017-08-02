@@ -5,7 +5,7 @@
    <title>Monique's Final Project</title>
    <link rel="stylesheet" type="text/css" href="css/reset.css">
    <link rel="stylesheet" type="text/css" href="css/style.css">
-   <meta name="viewport" content="width=device-width, initial scale=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body class="bg">
 <div id="video" class="fullscreen-bg">
@@ -165,10 +165,10 @@
     			<img class='resize_fit_center' id='Om-Point-gallery' src="css/images/bed_breakfast_single.jpg" alt="Om Point breakfast" />
     			<div id="arrow-right">
     				<p>&#x21A0;</p>
-    			</div>
+    			</div>s
     		</div>	
 	</section>
-	<section id="location" class="location-hide">
+	<section id="location">
 	<h1>LOCATION</h1>
 		<table>
 			<th>
@@ -206,7 +206,7 @@
 		</div>
 	</footer>
 	</div>	
-	<script id = "booking-template" type="text/handlebars-template">
+	<script id = "booking-template" src="text/handlebars-template">
 		<li data-id = "{{firstNameId}}">
 		<p>{{firstName}}</p>
 		<li data-id = "{{firstNameId}}">
@@ -226,7 +226,7 @@
 		<li data-id = "{{timeId}}">
 		<p>{{time}}</p>
 		<li data-id = "{{comments}}">
-		<p>{{comment}}</p>
+		<p>{{comments}}</p>
 		<i class="fa fa-trash delete"></i>
 		</li>
 	</script>
@@ -234,6 +234,6 @@
    <script src="js/jquery-3.2.1.js"></script>
    <script type="js/handlebars-v4.0.5.js"></script>
    <script src="js/main.js"></script>
-   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAu2gfEnsMIg4cbLgmS4WWCE4vob7MzInU&callback=initMap"></script>
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNyKshFLTwAPN4KnM9lMOIdjpm8d5tSzE&callback=initMap" async defer></script>
 </body>
 </html>

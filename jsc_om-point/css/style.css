@@ -609,12 +609,11 @@ td {
 
 #map
 (map inside location section. Updates depending on which sub-menu item user clicks - markers and color change)  */
+
 #map {
-  display: block;
-  width: 35%;
-  height: 100%;
-  margin: 0 auto;
-}
+    height: 100px;
+  }
+
 
 .gallery-hide {
 left: -100%;

@@ -10,17 +10,55 @@
     firebase.initializeApp(config);
 
 var database = firebase.database();
+//openNav function
 
+/* Set the width of the side navigation to -1350 */
+function openNav() {
 
+      $(".sidenav").removeClass("sidenav").addClass("open-sidenav");
+
+      $("#main").addClass("main-transform");
+
+      $("#bookings").addClass("main-transform");
+
+      $("#form").addClass("main-transform");
+
+      $("#location").addClass("main-transform");
+
+      $("#arrow-left").addClass("arrow-mainTransform");
+
+      $("arrow-right").addClass("arrow-mainTransform");
+
+      $('footer').addClass("main-transform");
+  }
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+
+      $(".sidenav").removeClass("open-sidenav").addClass("sidenav");
+
+      $("#main").removeClass("main-transform");
+
+      $("#bookings").removeClass("main-transform");
+
+      $("#form").removeClass("main-transform");
+
+      $("#location").removeClass("main-transform");
+
+      $("#arrow-left").removeClass("arrow-mainTransform");
+
+      $("arrow-right").removeClass("arrow-mainTransform");
+
+      $('footer').removeClass("main-transform");
+  }
 //Page loads
 //Clickable: Logo, menu hamburger icon, "OPENING HOURS", "BOOK ONLINE", Social buttons
 //function for hiding main menu in Side nav
-
-function hideMainMenuSideNav () {
+var hideMainMenuSideNav = function noMenuNav() {
 
   $('#SidenavMenu').addClass('hide-menu-item');
 
-}
+};
 //option 1.
 //User clicks logo
 //page refreshes
@@ -40,43 +78,13 @@ var openSideNav = $('#hamburger-icon').on('click', function (e) {
   /* Set the width of the side navigation to 250px */
     $('#hamburger-icon div').addClass("change");
 
-  var sideNavDisplay = function openNav() {
-
-    document.getElementsByClassName("sidenav").removeClass("sidenav").addClass("open-sidenav");
-
-      document.getElementById("#main").addClass("main-transform");
-
-      document.getElementById("#bookings").addClass("main-transform");
-
-      document.getElementById("#form").addClass("main-transform");
-
-      document.getElementById("#location").addClass("main-transform");
-
-      document.getElementById("#arrow-left").addClass("arrow-mainTransform");
-
-      document.getElementById("arrow-right").addClass("arrow-mainTransform");
+    openNav(); 
 
       $('footer').addClass("main-transform");
-  }
+  });
 /* Set the width of the side navigation to 0 */
-  var sideNavHidden = function closeNav() {
-    document.getElementsByClassName("sidenav").removeClass("open-sidenav").addClass("sidenav");
-
-      document.getElementById("#main").removeClass("main-transform");
-
-      document.getElementById("#bookings").removeClass("main-transform");
-
-      document.getElementById("#form").removeClass("main-transform");
-
-      document.getElementById("#location").removeClass("main-transform");
-
-      document.getElementById("#arrow-left").removeClass("arrow-mainTransform");
-
-      document.getElementById("arrow-right").removeClass("arrow-mainTransform");
-
-      $('footer').removeClass("main-transform");
-  }
-});
+    closeNav();
+  
 
 //Option 3.
 //User clicks menu hamburger icon (#hamburger-icon) again
@@ -88,9 +96,9 @@ var openSideNav = $('#hamburger-icon').on('click', function (e) {
 var exitSideNav = $("#hamburger-icon").on('dblclick', function(){
 
     $('#hamburger-icon div').removeClass("change");
-  }
+  });
     closeNav();
-});
+
 
 
 //Side nav open:
@@ -103,11 +111,11 @@ var aboutSelect = $('#about').on('click', function() {
 
     $('#about').addClass('selected');
   
-  }
+  });
 
   hideMainMenuSideNav(); 
 
-});
+
 
 //user clicks 'ACCOMMODATION'
 //side nav menu is hidden and accommodation items are displayed in the side nav
@@ -118,11 +126,11 @@ var accommodationSelect = $('#accommodation').on('click', function() {
   
     $('#accommodation').addClass('selected');
 
-   }
+   });
 
   hideMainMenuSideNav(); 
 
-});
+
 
 
 //user clicks 'GALLERY'
@@ -189,9 +197,9 @@ var exitGalleryHamburger = $('#hamburger-icon').on('click', function() {
   $('video').removeClass('fullscreen-bg_video-noColor');
 
     openNav();
-  }
+  });
 
-});
+
 
 //user clicks 'LOCATION'
 //Side nav is hidden and video changes to white. Location items appear
@@ -218,41 +226,45 @@ hideMainMenuSideNav ();
 
 });
 
+
 //map
 var styles = [
-stylers: [
-{ hue: '#8080ff' },
-{ saturation: -20 }
-]
-}, {
-  featureType: 'road',
-  elementsType: 'geometry',
-  stylers: [
-  { lightness: 100 },
-  {visibility: 'simplified' }
+{
+    stylers: [
+    { hue: '#8080ff' },
+    { saturation: -20 },
   ]
-}, {
-  featureType: 'road',
-  elementsType: 'labels',
-  stylers: [
-  } visibility: 'off' }
+},
+{
+    featureType:'road',
+    elementType:'geometry',
+    stylers: [
+    { lightness: 100 },
+    {visibility: 'simplified' },
   ]
-   }
+},
+{
+    featureType: 'road',
+    elementType: 'labels',
+    stylers: [
+    { visibility: 'off' }
+ ]
+}
 ];
 
 function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById("#map"), {
     center: {lat: -36.848629, lng: 174.737587},
     zoom: 8,
     zoomControl: false,
     fullScreenControl: true,
     styles: styles
+});
 
-    var marker = new google.mapsMarker ( {
+    var marker = new google.maps.Marker( {
       position: {lat: 40.8054491, lng: -73.9654415},
       map: map
     });
-  });
 }
 
   //user clicks logo to leave 'LOCATION'
@@ -311,10 +323,8 @@ var contactSelect = $('#contact').on('click', function() {
     $('#contact').addClass('selected');
 
     $('#nav-footer h2').addClass('nav-footerButtonOnly');
-
-   }
-
-  hideMainMenuSideNav(); 
+  
+    hideMainMenuSideNav();
 
 });
 
@@ -358,89 +368,63 @@ hideMainMenuSideNav ();
 $('#form').on('submit', function(e) {
 e.preventDefault ();
 
-  var userInput = {
-      $('#firstName').val(),
-      $('#lastName').val(),
-      $('#phone').val(),
-      $('#email').val(),
-      $('#guests').val(),
-      $('#room').val(),
-      $('#date').val(),
-      $('#time').val(), 
-      $('#comments').val();
-  }
-//do these need to be housed seperately?
-      $('#firstName').val('')
-  var firstNameReference = database.ref ('comments');
-    commentsReference.push ({
-      firstName: userInput,
-  })
-      $('#lastName').val('')
-  var lastNameReference = database.ref ('comments');
-    commentsReference.push ({
-      lastName: userInput,
-  })
-      $('#phone').val('')
-  var phoneReference = database.ref ('comments');
-    phoneReference.push ({
-      phone: userInput,
-  })
-      $('#email').val('')
-  var emailReference = database.ref ('comments');
-    emailReference.push ({
-      email: userInput,
-  })
-      $('#guests').val(''),
-  var guestsReference = database.ref ('comments');
-    guestsReference.push ({
-      guests: userInput,
-  })
-      $('#room').val('')
-  var roomReference = database.ref ('comments');
-    roomReference.push ({
-      room: userInput,
-  })
-      $('#date').val('')
-  var dateReference = database.ref ('comments');
-    dateReference.push ({
-      date: userInput,
-  })
-      $('#time').val('')
-  var timeReference = database.ref ('comments');
-    timeReference.push ({
-      time: userInput,
-  }) 
-      $('#comments').val('');
+var firstName = $('#firstName').val(),
+        lastName = $('#lastName').val(),
+        phone = $('#phone').val(),
+        email = $('#email').val(),
+        guests = $('#guests').val(),
+        room = $('#room').val(),
+        date = $('#date').val(),
+        time = $('#time').val(), 
+        comments = $('#comments').val();
 
-  var commentsReference = database.ref ('comments');
-    commentsReference.push ({
-      comments: userInput,
-  })
+var commentsRef = database.ref('comments');
+
+commentsRef.push ({
+      firstName: firstName,
+      lastName: lastName,
+      phone: phone,
+      email: email,
+      guests: guests,
+      room: room,
+      date: date, 
+      time: time,
+      comments: comments,
+  });
 });
+
+  
 //can i do one for all? How?
 function getComments() {
   database.ref('comments').on('value', function (results) {
     var lastComment = results.val();
-    var comment = [],
+    var comment = [];
+    
   for (var item in lastComment) {
     var context = {
       comments: lastcomment[item].comments,
       commentsId: item
-     };
-    }
-
+    };
+    
     var source = $('#booking-template').html;
-    var template = handlebars.compile(source);
-    var bookingElement = template(context);
-    comments.push(bookingElement)
+    var template = Handlebars.compile(source);
+    var bookingElement = template('context');
+    comments.push(bookingElement);
 
     }
-    $('.comments').empty();
+  
+    $ ('.comments').empty();
 
   for (var i in comments) {
-    $('.comments').append(comments[i])
+    $('.comments').append(comments[i]);
+    
     }
-  }
+  });
+}
+
+function getComments() {
+  
+}
 
 getComments();
 
