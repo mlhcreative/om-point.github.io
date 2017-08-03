@@ -215,7 +215,7 @@ var exitGalleryHamburger = $('#hamburger-icon').on('click', function() {
 //user clicks .sub-menu-nav items (TRANSPORT, ENTERTAINMENT, RECREATION, SURF-PICKS) map. Markers are displayed on the map. create an array?
 var locationSelected = $('#location').on('click', function () {
 
-hideMainMenuSideNav (); 
+  hideMainMenuSideNav(); 
 
   $('#nav-footer').addClass('hide-menu-item').addClass('navSlide-full');
 
