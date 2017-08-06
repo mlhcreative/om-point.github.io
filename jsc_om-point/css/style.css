@@ -5,6 +5,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100italic,100,900);
 @import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700);
 *{margin:0;padding:0;box-sizing: border-box;}
+
 html{
   overflow-x:hidden;
 }
@@ -188,22 +189,16 @@ input {
 /*.sidenav 
 /*(inside side navigation panel div. The navigation menu links)*/ 
 .sidenav {
-    height: 100%; /* 100% Full-height */
-  /* 0 width - change this with JavaScript  */
     position: fixed; /* Stay in place */
-    z-index: -2; /* Stay on top */
-    top: 0;
-    right: -1350px;
+    z-index: 10; /* Stay on top */
+    top: 60px;
     width: 30%;
-    background-color: #ffffff; /*White */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 300px; /* Place content 60px from the top */
     padding-left: 150px;
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-    transform: right;
+    visibility:hidden;
 }
 .open-sidenav {
     right: 0px;
+    visibility: visible;
 }
 
 .sideNav-Full {
@@ -243,7 +238,7 @@ input {
 }
 
 #SidenavMenu {
-  padding-left: 20px
+  padding-left: 20px;
   z-index: -2;
 }
 
@@ -273,8 +268,8 @@ padding: 35px;
 }
 
 #nav-footer {
-top: 60%;
-z-index: 0;
+  top: 60%;
+  z-index: 0;
 }
 
 .sidenav #nav-footer h2 {
@@ -404,6 +399,7 @@ visibility: hidden;
   padding: 0.5%;
   margin: 0% 0% 1.5% 0%;
   top: 0;
+  z-index: 100;
 }
 
 /* .bar1 .bar2 .bar3  
