@@ -60,7 +60,7 @@ header{
   padding: 2%;
   width:100%;
   top: 0;
-  z-index: 1;
+  z-index: 100;
   position: fixed;
 }
 
@@ -182,6 +182,16 @@ input {
   outline: none;
 }
 
+nav a {
+  font-family: 'Raleway', sans-serif; 
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+}
 /*  table   */
 
 /*(side navigation panel div) */
@@ -191,13 +201,13 @@ input {
 .sidenav {
     position: fixed; /* Stay in place */
     z-index: 10; /* Stay on top */
-    top: 60px;
+    top: 200px;
     width: 30%;
+    right: 0px;
     padding-left: 150px;
-    visibility:hidden;
+    visibility: hidden;
 }
 .open-sidenav {
-    right: 0px;
     visibility: visible;
 }
 
@@ -205,14 +215,14 @@ input {
   width: 100%;
 }
 /*  side nav links */
-.sidenav a {
-    padding: 8px 8px 8px 32px;
+#SidenavMenu {
+    padding: 70px 8px 8px 150px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 1em;
     color: #000000;
     display: block;
-    transition: 0.3s
 }
+
 .sidenav h1 {
   text-align: left;
   font-weight: 400;
@@ -237,30 +247,25 @@ input {
     .sidenav a {font-size: 18px;}
 }
 
-#SidenavMenu {
-  padding-left: 20px;
-  z-index: -2;
-}
-
 #contact {
-  z-index: -3;
   text-align: center;
+  visibility: hidden;
 }
 
 #contact p {
-text-align: center;
+  text-align: center;
 }
 
 #accommodation {
-  z-index: -4;
+  visibility: hidden;
 }
 
 #accommodation p {
-padding: 35px;
+  padding: 35px;
 }
 
 #about {
-  z-index: -5;
+  visibility: hidden;
 }
 
 #about p {
@@ -269,7 +274,7 @@ padding: 35px;
 
 #nav-footer {
   top: 60%;
-  z-index: 0;
+  visibility: hidden;
 }
 
 .sidenav #nav-footer h2 {
@@ -279,11 +284,11 @@ padding: 35px;
 /* back to the menu */
 
 .Selected {
-  z-index: -2;
+  visibility: visible;
 }
 
 .hide-menu-item {
-  z-index: -4;
+  visibility: hidden;
 }
 
 /*hide opening hours */
@@ -313,20 +318,10 @@ visibility: hidden;
     padding-top: 8%;
     height: 75%;
 }
-
-nav a {
-  font-family: 'Raleway', sans-serif; 
-  font-size: 1.5em;
-  font-weight: 400;
-  line-height: 1.5em;
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  color: #D3D3D3;
-}
 /* class for when user selects book online form */
 .main-transform {
-    left: -15%;
+    right: 8%;
+    top: 25%;
 }
 .arrow-mainTransform {
 width: 10%;
@@ -382,7 +377,8 @@ visibility: hidden;
   margin: 1.5% 0% 0% 0%;
   top: 0;
   width: 10em;
-  z-index: 1;
+  z-index: 100;
+  position: fixed;
 }
 /*.container
 (contain hamburger menu icon inside header) */
@@ -615,9 +611,11 @@ z-index: -101;
 
 
 #footer-menu {
+  color: #D3D3D3;
   max-width: 100%;
   width: 100%;
-  z-index: -3;
+  visibility: visible;
+  position: fixed;
 }
 
 /*(opening hours nav at bottom left of main page)*/
@@ -652,7 +650,11 @@ footer {
   background: transparent;
   display: block;
   padding:2%;
-  position: relative;
+  position: fixed;
+  width: 100%;
+}
+#copyright {
+  padding: 3%;
 }
 
 .footer-nav, #social{

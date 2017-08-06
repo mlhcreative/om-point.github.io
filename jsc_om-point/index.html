@@ -25,17 +25,17 @@
 	<div id ="sideNav" class="sidenav">
 	  	<section id="SidenavMenu" class="sidenav">
 	  		<nav>
-	  			<a href="#" class="mainMenuItem"><h1>About</h1></a>
-		  		<a href="#" class="mainMenuItem"><h1>Accommodation</h1></a>
-		  		<a href="#" class="mainMenuItem"><h1>Gallery</h1></a>
-		  		<a href="#" class="mainMenuItem"><h1>Location</h1></a>
-		 		<a href="#" class="mainMenuItem"><h1>Contact</h1></a>
+	  			<a href="#" class="about" class="mainMenuItem"><h1>About</h1></a>
+		  		<a href="#" class="accommodation" class="mainMenuItem"><h1>Accommodation</h1></a>
+		  		<a href="#" class="gallery" class="mainMenuItem"><h1>Gallery</h1></a>
+		  		<a href="#" class="location" class="mainMenuItem"><h1>Location</h1></a>
+		 		<a href="#" class="contact" class="mainMenuItem"><h1>Contact</h1></a>
 	 		</nav>
 		</section>
 	<!-- Uelement to open the sidenav -->
 	<!-- Add all page content inside this div - side nav to push page content to the right -->
-		<section id="about" class="sidenav">
-			<nav><a href="#"><h3 a href="#">ABOUT</h3></a></nav><br />
+		<section class="sidenav">
+			<nav><a href="#"><h3 a href="#" id="about">ABOUT</h3></a></nav><br />
 			<br />
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -192,8 +192,10 @@
 	</div>
     <footer>
         <section id="footer-menu" class="clearfix">
-	 		<nav id="hours"><a href="">OPENING HOURS</a></nav>
-	 		<nav id="book-online"><a href="">BOOK ONLINE</a></nav>
+	 		<nav> 
+	 		<a href="#" id="hours">OPENING HOURS</a>
+	 		<a href="#" id="book-online">BOOK ONLINE</a>
+	 		</nav>
 	 	</section>
 		<div>
 			<nav id="social">
@@ -203,8 +205,8 @@
 				<a href="#" target="_blank"><img src="css/images/insta logo.png" alt="link to MLHCDS Instagram feed" class="social-icon"></a>
 			</nav>
 		</div>
-		<div>
-			<p>&copy;2016</p>
+		<div id="copyright">
+			<p>&copy;2017</p>
 		</div>
 	</footer>
 	</div>	

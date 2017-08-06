@@ -43,8 +43,8 @@ function hideMainMenuSideNav() {
 //option 1.
 //User clicks logo
 //page refreshes
-var logo = $('#logo').on('click', function() {
-    location.reload(forceGet);
+var logo = $('logo').on('click', function() {
+    location.reload(forceget);
 });
 
 //Option 2.
@@ -70,7 +70,7 @@ var openSideNav = $('#hamburger-icon').on('click', function(e) {
 //add class .hide-menu-item to #SidenavMenu
 //add class .selected to #about
 
-var aboutSelect = $('#about').on('click', function() {
+var aboutSelect = $('.about').on('click', function() {
 
     $('#about').addClass('selected');
 
@@ -86,7 +86,7 @@ var aboutSelect = $('#about').on('click', function() {
 //add class .hide-menu-item to #SidenavMenu
 //add class .selected to #accommodation
 
-var accommodationSelect = $('#accommodation').on('click', function() {
+var accommodationSelect = $('.accommodation').on('click', function() {
 
     $('#accommodation').addClass('selected');
 
@@ -113,7 +113,7 @@ var accommodationSelect = $('#accommodation').on('click', function() {
 //add class .img-slide-out to #gallery-1
 //add class .img-slide-in to #gallery
 //etc.
-var gallerySelect = $('#gallery').on('click', function() {
+var gallerySelect = $('.gallery').on('click', function() {
 
     hideMainMenuSideNav();
 
