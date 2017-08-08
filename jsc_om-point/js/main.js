@@ -57,7 +57,7 @@ var logo = $('logo').on('click', function() {
 var openSideNav = $('#hamburger-icon').on('click', function(e) {
     e.preventDefault();
     /* Set the width of the side navigation to 250px */
-    $('#hamburger-icon div').toggleClass("change");
+    $('#hamburger-icon').toggleClass("change");
 
     openNav();
 
@@ -140,7 +140,7 @@ var exitGalleryLogo = $('#logo').on('click', function() {
     $('#gallery-1').addClass('gallery-hide');
     $('#gallery-2').addClass('gallery-hide');
 
-    $('#video').removeClass('ullscreen-bg-noColor').removeClass('fullscreen-bg');
+    $('#video').removeClass('fullscreen-bg-noColor').removeClass('fullscreen-bg');
 
     $('video').removeClass('fullscreen-bg_video-noColor');
 
