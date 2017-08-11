@@ -201,10 +201,12 @@ nav a {
 .sidenav {
     position: fixed; /* Stay in place */
     z-index: 10; /* Stay on top */
-    top: 200px;
+    top: 0%;
     width: 30%;
     right: 0px;
-    padding-left: 150px;
+    height: 100%;
+    padding: 200px 100px 100px;
+    background-color: white;
     visibility: hidden;
 }
 .open-sidenav {
@@ -216,7 +218,7 @@ nav a {
 }
 /*  side nav links */
 #SidenavMenu {
-    padding: 70px 8px 8px 150px;
+    padding: 200px 8px 8px 150px;
     text-decoration: none;
     font-size: 1em;
     color: #000000;
@@ -313,16 +315,16 @@ visibility: hidden;
 /*  #main
 (main page contents to be pushed left by side navigation panel. Styles page content - push the page content to the left when you open the side navigation) */
 
-#main {
+.main {
     padding: 20px;
-    padding-top: 8%;
+    top: 12%;
     height: 75%;
 }
 /* class for when user selects book online form */
 .main-transform {
-    right: 8%;
-    top: 25%;
+    right: 12%;
 }
+
 .arrow-mainTransform {
 width: 10%;
 }
@@ -377,7 +379,6 @@ visibility: hidden;
   margin: 1.5% 0% 0% 0%;
   top: 0;
   width: 10em;
-  z-index: 100;
   position: fixed;
 }
 /*.container
@@ -469,18 +470,20 @@ position: absolute;
 
 #confirm-booking-button {
 display: block;
-padding-top: 50%;
+padding-top: 55%;
 }
 
 #form{
   display: block;
   max-width: 35%;
+  top: 0%;
+  right: 5%;
 }
 
 /*(inside #bookings section. One form but seperated whole form into divs so can float side by side)*/
 
 /*(gallery section)*/
-#gallery #gallery-1 #gallery-2 {
+#gallery {
   display: block;
   margin: auto;
   padding: 30px;
@@ -652,6 +655,7 @@ footer {
   padding:2%;
   position: fixed;
   width: 100%;
+  bottom: 0%;
 }
 #copyright {
   padding: 3%;
@@ -662,6 +666,9 @@ footer {
   top: 0%;
   padding: 0%;
   text-align: center;
+}
+.social-transform {
+  padding-right: 25%; 
 }
 
 /*  .clearfix */

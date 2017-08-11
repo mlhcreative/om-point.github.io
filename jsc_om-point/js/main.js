@@ -17,7 +17,7 @@ function openNav() {
 
     $("#SidenavMenu").toggleClass("open-sidenav");
 
-    $("#main").toggleClass("main-transform");
+    $(".main").toggleClass("main-transform");
 
     $("#bookings").toggleClass("main-transform");
 
@@ -29,7 +29,7 @@ function openNav() {
 
     $("arrow-right").toggleClass("arrow-mainTransform");
 
-    $('footer').toggleClass("main-transform");
+    $('.social').toggleClass("social-transform");
 }
 
 //Page loads
@@ -43,8 +43,8 @@ function hideMainMenuSideNav() {
 //option 1.
 //User clicks logo
 //page refreshes
-var logo = $('logo').on('click', function() {
-    location.reload(forceget);
+var logo = $('#logo').on('click', function() {
+    location.reload(true);
 });
 
 //Option 2.
@@ -61,7 +61,6 @@ var openSideNav = $('#hamburger-icon').on('click', function(e) {
 
     openNav();
 
-    $('footer').toggleClass("main-transform");
 });
 
 //Side nav open:
