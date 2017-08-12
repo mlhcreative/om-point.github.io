@@ -274,9 +274,9 @@ nav a {
   padding: 35px;
 }
 
-#nav-footer {
+.nav-footer {
   top: 60%;
-  visibility: hidden;
+  position: fixed;
 }
 
 .sidenav #nav-footer h2 {
@@ -285,17 +285,15 @@ nav a {
 
 /* back to the menu */
 
-.selected {
-  visibility: visible;
-}
 
 .hide-menu-item {
-  visibility: hidden;
+  visibility: visible;
 }
 
 /*hide opening hours */
 .nav-footerButtonOnly {
-visibility: hidden;
+  position: fixed;
+  visibility: hidden;
 }
 
 /*(contact div)
@@ -326,7 +324,7 @@ visibility: hidden;
 }
 
 .arrow-mainTransform {
-width: 10%;
+    right: 12%
 }
 
 .fullscreen-bg-Changeout {
@@ -442,7 +440,6 @@ top: 0;
   padding: 30px;
   width: 100%;
   max-width: 100%;
-  float: center;
   position: absolute;
 }
 
@@ -473,7 +470,7 @@ display: block;
 padding-top: 55%;
 }
 
-#form{
+.form{
   display: block;
   max-width: 35%;
   top: 0%;
@@ -489,11 +486,10 @@ padding-top: 55%;
   padding: 30px;
   width: 100%;
   max-width: 100%;
-  float: center;
   position: absolute;
 }
 
-#gallery-1 {
+/*#gallery-1 {
   display: block;
   margin: auto;
   padding: 30px;
@@ -562,9 +558,11 @@ padding-top: 55%;
 (image inside gallery section will slide to the left new image will slide in as it slides out)*/
 
 #location {
-  display: block;
-  max-width: 100%;
+ display: block;
+  margin: auto;
+  padding: 30px;
   width: 100%;
+  max-width: 100%;
   position: absolute;
 }
 
@@ -574,7 +572,7 @@ padding-top: 55%;
 
 table {
   display: block;
-  width: 35%;
+  width: 40%;
   padding-right: 35px;
   margin: auto;
   border-collapse: collapse;
@@ -594,24 +592,10 @@ td {
 (map inside location section. Updates depending on which sub-menu item user clicks - markers and color change)  */
 
 #map {
-    height: 20em;
     margin-left:35%;
     margin-right: 35%;
+    height: 50%;
   }
-
-
-.gallery-hide {
-left: -100%;
-}
-
-.location-hide {
-z-index: -101;
-}
-
-.bookings-hide {
-z-index: -101;
-}
-
 
 #footer-menu {
   color: #D3D3D3;

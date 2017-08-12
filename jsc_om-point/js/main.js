@@ -19,17 +19,11 @@ function openNav() {
 
     $(".main").toggleClass("main-transform");
 
-    $("#bookings").toggleClass("main-transform");
-
-    $("#form").toggleClass("main-transform");
-
-    $("#location").toggleClass("main-transform");
-
     $("#arrow-left").toggleClass("arrow-mainTransform");
 
     $("arrow-right").toggleClass("arrow-mainTransform");
 
-    $('.social').toggleClass("social-transform");
+    $(".social").toggleClass("social-transform");
 }
 
 //Page loads
@@ -69,13 +63,13 @@ var openSideNav = $('#hamburger-icon').on('click', function(e) {
 //add class .hide-menu-item to #SidenavMenu
 //add class .selected to #about
 
-var aboutSelect = $('.about').on('click', function() {
+//var aboutSelect = $('.about').on('click', function() {
 
-    $('#about').addClass('selected');
+    //$('#about').addClass('selected');
 
-    hideMainMenuSideNav();
+    //hideMainMenuSideNav();
 
-});
+//});
 
 
 
@@ -85,13 +79,13 @@ var aboutSelect = $('.about').on('click', function() {
 //add class .hide-menu-item to #SidenavMenu
 //add class .selected to #accommodation
 
-var accommodationSelect = $('.accommodation').on('click', function() {
+//var accommodationSelect = $('.accommodation').on('click', function() {
 
-    $('#accommodation').addClass('selected');
+    //$('#accommodation').addClass('selected');
 
-    hideMainMenuSideNav();
+    //hideMainMenuSideNav();
 
-});
+//});
 
 
 
@@ -111,7 +105,7 @@ var accommodationSelect = $('.accommodation').on('click', function() {
 //user clicks right arrow
 //add class .img-slide-out to #gallery-1
 //add class .img-slide-in to #gallery
-//etc.
+//etc
 var gallerySelect = $('.gallery').on('click', function() {
 
     hideMainMenuSideNav();
@@ -120,11 +114,11 @@ var gallerySelect = $('.gallery').on('click', function() {
 
     $('#video').removeClass('fullscreen-bg').addClass('fullscreen-bg-noColor');
 
-    $('video').addClass('fullscreen-bg_video-noColor');
+    $('video').toggleClass('fullscreen-bg_video-noColor');
 
     closeNav();
 
-    $('#gallery').removeClass('#gallery-hide');
+    //$('#gallery').removeClass('main-transform');
 
 });
 
@@ -133,34 +127,34 @@ var gallerySelect = $('.gallery').on('click', function() {
 //add class .gallery-hide to #gallery/#gallery-1/#gallery-2
 //remove class .fullscreen-bg-noColor from first body div where video is stored add class .fullscreen-bg
 //remove class .fullscreen-bg_video-noColor from video
-var exitGalleryLogo = $('#logo').on('click', function() {
+//var exitGalleryLogo = $('#logo').on('click', function() {
 
-    $('#gallery').addClass('gallery-hide');
-    $('#gallery-1').addClass('gallery-hide');
-    $('#gallery-2').addClass('gallery-hide');
+    //$('#gallery').addClass('main-transform');
+    //$('#gallery-1').addClass('main-transform');
+    //$('#gallery-2').addClass('main-transform');
 
-    $('#video').removeClass('fullscreen-bg-noColor').removeClass('fullscreen-bg');
+    //$('#video').removeClass('fullscreen-bg-noColor').removeClass('fullscreen-bg');
 
-    $('video').removeClass('fullscreen-bg_video-noColor');
+    //$('video').removeClass('fullscreen-bg_video-noColor');
 
-});
+//});
 //user clicks menu hamburger icon to escape 'GALLERY'
 //page restore to first load appearance with side nav
 //Call option 2. function if user double clicks call option 3. function
 //remove class .fullscreen-bg-noColor from first body div where video is stored add class .fullscreen-bg
 //remove class .fullscreen-bg_video-noColor from video
-var exitGalleryHamburger = $('#hamburger-icon').on('click', function() {
+//var exitGalleryHamburger = $('#hamburger-icon').on('click', function() {
 
-    $('#gallery').addClass('gallery-hide');
-    $('#gallery-1').addClass('gallery-hide');
-    $('#gallery-2').addClass('gallery-hide');
+    //$('#gallery').addClass('main-transform');
+    //$('#gallery-1').addClass('main-transform');
+    //$('#gallery-2').addClass('main-transform');
 
-    $('#video').removeClass('ullscreen-bg-noColor').removeClass('fullscreen-bg');
+    //$('#video').removeClass('fullscreen-bg-noColor').removeClass('fullscreen-bg');
 
-    $('video').removeClass('fullscreen-bg_video-noColor');
+    //$('video').removeClass('fullscreen-bg_video-noColor');
 
-    openNav();
-});
+    //openNav();
+//});
 
 
 
@@ -185,7 +179,7 @@ var locationSelected = $('#location').on('click', function() {
 
     closeNav();
 
-    $('#location').removeClass('#location-hide');
+    //$('#location').removeClass('#main-transform');
 
 });
 
@@ -221,7 +215,7 @@ var styles = [{
 ];
 
 function initMap() {
-    map = new google.maps.Map(document.getElementById("#map"), {
+    map = new google.maps.Map(document.getElementById("map"), {
         center: {
             lat: -36.848629,
             lng: 174.737587
@@ -246,31 +240,31 @@ function initMap() {
 //add class .location-hide to #location
 //remove class .fullscreen-bg-noColor from first body div where video is stored add class .fullscreen-bg
 //remove class .fullscreen-bg_video-noColor from video
-var exitLocationLogo = $('#logo').on('click', function() {
+//var exitLocationLogo = $('#logo').on('click', function() {
 
-    $('#location').addClass('location-hide');
+    //$('#location').addClass('main-transform');
 
-    $('#video').removeClass('ullscreen-bg-noColor').removeClass('fullscreen-bg');
+    //$('#video').removeClass('ullscreen-bg-noColor').removeClass('fullscreen-bg');
 
-    $('video').removeClass('fullscreen-bg_video-noColor');
+    //$('video').removeClass('fullscreen-bg_video-noColor');
 
-});
+//});
 //user clicks menu hamburger icon to escape 'LOCATION'
 //page restore to first load appearance with side nav
 //Call option 2. function if user double clicks call option 3. function
 //remove class .fullscreen-bg-noColor from first body div where video is stored add class .fullscreen-bg
 //remove class .fullscreen-bg_video-noColor from video
-var exitGalleryHamburger = $('#hamburger-icon').on('click', function() {
+//var exitGalleryHamburger = $('#hamburger-icon').on('click', function() {
 
-    $('#location').addClass('location-hide');
+    //$('#location').addClass('main-transform');
 
-    $('#video').removeClass('ullscreen-bg-noColor').removeClass('fullscreen-bg');
+    //$('#video').removeClass('ullscreen-bg-noColor').removeClass('fullscreen-bg');
 
-    $('video').removeClass('fullscreen-bg_video-noColor');
+    //$('video').removeClass('fullscreen-bg_video-noColor');
 
-    openNav();
+    //openNav();
 
-});
+//});
 
 //potential add surf report if hear back about api key in time
 //$.ajax ( {
@@ -334,7 +328,7 @@ var bookOnlineButton = $('#book-now').on('click', function() {
 
     closeNav();
 
-    $('#bookings').removeClass('#bookings-hide');
+    $('#bookings').removeClass('main-transform');
 
 });
 
