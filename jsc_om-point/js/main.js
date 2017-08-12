@@ -130,6 +130,14 @@ var gallerySelect = $('.gallery').on('click', function() {
 
     //$('#gallery').removeClass('main-transform');
 
+    $("#contact-main").removeClass("section-selected");
+
+    $("#video").removeClass('fullscreen-bg-noColor');
+
+    $("#location").removeClass("section-selected");
+
+    $("#bookings").removeClass("section-selected");
+
 });
 
 //user clicks logo to leave 'GALLERY'
@@ -194,6 +202,13 @@ var locationSelected = $('.location').on('click', function() {
     $("#location").toggleClass("section-selected");
 
     //$('#location').removeClass('#main-transform');
+    $("#contact-main").removeClass("section-selected");
+
+    $("#video").removeClass('fullscreen-bg-noColor');
+
+    $("#gallery").removeClass("section-selected");
+
+    $("#bookings").removeClass("section-selected");
 
 });
 
@@ -311,9 +326,15 @@ function initMap() {
 //});
 var contactSelect = $('.contact').on('click', function() {
 
-     $("#video").toggleClass('fullscreen-bg-noColor');
+    $("#video").toggleClass('fullscreen-bg-noColor');
 
     $("#contact-main").toggleClass("section-selected");
+
+    $("#location").removeClass('section-selected');
+
+    $("#gallery").removeClass("section-selected");
+
+    $("#bookings").removeClass("section-selected");
 
 
 });
@@ -351,7 +372,13 @@ var bookOnlineButton = $('#book-now').on('click', function() {
 
     $('#bookings').toggleClass("section-selected");
     
-    $("#contact-main").toggleClass("section-selected");
+    $("#contact-main").removeClass("section-selected");
+
+    $("#video").removeClass('fullscreen-bg-noColor');
+
+    $("#location").removeClass('section-selected');
+
+    $("#gallery").removeClass('section-selected');
 
 });
 
@@ -441,8 +468,15 @@ $('#hours').on('click', function() {
 $('#book-online').on('click', function() {
 
    $("#bookings").toggleClass("section-selected");
-   
-   $("#contact-main").toggleClass("section-selected");
+
+    $("#contact-main").removeClass("section-selected");
+
+    $("#video").removeClass('fullscreen-bg-noColor');
+
+    $("#location").removeClass('section-selected');
+
+    $("#gallery").removeClass('section-selected');
+
 
 
 });
