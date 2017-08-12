@@ -324,17 +324,17 @@ var openingHoursSelect = $('#opening-hours').on('click', function() {
 //remove class .bookings-hide from #bookings
 var bookOnlineButton = $('#book-now').on('click', function() {
 
-    hideMainMenuSideNav();
+    //hideMainMenuSideNav();
 
-    $('#nav-footer').addClass('hide-menu-item').addClass('navSlide-full');
+    //$('#nav-footer').addClass('hide-menu-item').addClass('navSlide-full');
 
-    $('#video').removeClass('fullscreen-bg').addClass('fullscreen-bg-Changeout');
+    //$('#video').removeClass('fullscreen-bg').addClass('fullscreen-bg-Changeout');
 
-    $('video').addClass('fullscreen-bg_video-Changeout');
+    //$('video').addClass('fullscreen-bg_video-Changeout');
 
-    closeNav();
+    //closeNav();
 
-    $('#bookings').removeClass('main-transform');
+    $('#bookings').toggleClass("section-selected");
 
 });
 
