@@ -73,7 +73,26 @@ var aboutSelect = $('.about').on('click', function() {
     //$("#about").toggleClass("nav-item-selected");
 
     //$("#accommodation").toggleClass("section-selected");
+    $("#about-main").toggleClass("section-selected");
 
+    $("video").toggleClass('fullscreen-bg__video-Changeout');
+
+    $("#video").toggleClass('fullscreen-bg-Changeout');
+
+    //$('#gallery').removeClass('main-transform');
+    $("#accommodation-main").removeClass("section-selected");
+
+    $("#location").removeClass("section-selected");
+
+    $("#gallery").removeClass("section-selected");
+
+    $("#gallery-1").removeClass("section-selected");
+
+    $("#gallery-2").removeClass("section-selected");
+
+    $("#bookings").removeClass("section-selected");
+
+    $("#contact-main").removeClass("section-selected");
 
 });
 
@@ -92,6 +111,28 @@ var accommodationSelect = $('.accommodation').on('click', function() {
     //$("#about").toggleClass("nav-item-selected");
 
     //$("#accommodation").toggleClass("section-selected");
+
+
+    $("#accommodation-main").toggleClass("section-selected");
+
+    $("video").toggleClass('fullscreen-bg__video-Changeout');
+
+    $("#video").toggleClass('fullscreen-bg-Changeout');
+
+    //$('#gallery').removeClass('main-transform');
+    $("#about-main").removeClass("section-selected");
+
+    $("#location").removeClass("section-selected");
+
+    $("#gallery").removeClass("section-selected");
+
+    $("#gallery-1").removeClass("section-selected");
+
+    $("#gallery-2").removeClass("section-selected");
+
+    $("#bookings").removeClass("section-selected");
+
+    $("#contact-main").removeClass("section-selected");
 
 });
 
@@ -126,19 +167,70 @@ var gallerySelect = $('.gallery').on('click', function() {
 
     //closeNav();
 
-     $("#gallery").toggleClass("section-selected");
+    $("#gallery").toggleClass("section-selected");
+
+    $("#video").toggleClass('fullscreen-bg-noColor');
 
     //$('#gallery').removeClass('main-transform');
+    $("#about-main").removeClass("section-selected");
 
-    $("#contact-main").removeClass("section-selected");
+    $("#accommodation-main").removeClass("section-selected");
 
-    $("#video").removeClass('fullscreen-bg-noColor');
+    $("video").toggleClass('fullscreen-bg__video-Changeout');
+
+    $("#video").toggleClass('fullscreen-bg-Changeout');
 
     $("#location").removeClass("section-selected");
 
     $("#bookings").removeClass("section-selected");
 
+    $("#contact-main").removeClass("section-selected");
+
 });
+
+var arrowLeft = $('#arrow-left').on('click', function(e) {
+
+    $("#gallery-1").toggleClass("section-selected");
+
+    $("#video").addClass('fullscreen-bg-noColor');
+
+    $("#about-main").removeClass("section-selected");
+
+    $("#accommodation-main").removeClass("section-selected");
+
+    $("#location").removeClass("section-selected");
+
+    $("#gallery").removeClass("section-selected");
+
+    $("#gallery-2").removeClass("section-selected");
+
+    $("#contact-main").removeClass("section-selected");
+
+    $("#bookings").removeClass("section-selected");
+
+});  
+
+var arrowRight = $('#arrow-right').on('click', function(e) {
+
+    $("#gallery-2").toggleClass("section-selected");
+
+    $("#video").addClass('fullscreen-bg-noColor');
+
+    $("#about-main").removeClass("section-selected");
+
+    $("#accommodation-main").removeClass("section-selected");
+
+    $("#location").removeClass("section-selected");
+
+    $("#gallery").removeClass("section-selected");
+
+    $("#gallery-1").removeClass("section-selected");
+
+    $("#contact-main").removeClass("section-selected");
+
+    $("#bookings").removeClass("section-selected");
+
+});  
 
 //user clicks logo to leave 'GALLERY'
 //page restore to first load appearance
@@ -202,13 +294,25 @@ var locationSelected = $('.location').on('click', function() {
     $("#location").toggleClass("section-selected");
 
     //$('#location').removeClass('#main-transform');
-    $("#contact-main").removeClass("section-selected");
+    $("#about-main").removeClass("section-selected");
 
-    $("#video").removeClass('fullscreen-bg-noColor');
+    $("#accommodation-main").removeClass("section-selected");
+
+    $("video").removeClass('fullscreen-bg__video-Changeout');
+
+    $("#video").removeClass('fullscreen-bg-Changeout');
 
     $("#gallery").removeClass("section-selected");
 
+    $("#gallery-1").removeClass("section-selected");
+
+    $("#gallery-2").removeClass("section-selected");
+
     $("#bookings").removeClass("section-selected");
+
+    $("#contact-main").removeClass("section-selected");
+
+    $("#video").removeClass('fullscreen-bg-noColor');
 
 });
 
@@ -216,10 +320,10 @@ var locationSelected = $('.location').on('click', function() {
 //map
 var styles = [{
         stylers: [{
-                hue: '#8080ff'
+                hue: '#f5eff5'
             },
             {
-                saturation: -20
+                saturation: -40
             },
         ]
     },
@@ -246,23 +350,25 @@ var styles = [{
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
         center: {
-            lat: -36.848629,
-            lng: 174.737587
+            lat: -36.846664,
+            lng: 174.724
         },
-        zoom: 8,
-        zoomControl: false,
+        zoom: 15,
+        zoomControl: true,
         fullScreenControl: true,
         styles: styles
     });
 
     var marker = new google.maps.Marker({
         position: {
-            lat: 40.8054491,
-            lng: -73.9654415
+            lat: -36.846664,
+            lng: 174.724532
         },
         map: map
     });
 }
+
+
 
 //user clicks logo to leave 'LOCATION'
 //page restore to first load appearance
@@ -330,9 +436,21 @@ var contactSelect = $('.contact').on('click', function() {
 
     $("#contact-main").toggleClass("section-selected");
 
+    $("#about-main").removeClass("section-selected");
+
+    $("#accommodation-main").removeClass("section-selected");
+
+    $("video").toggleClass('fullscreen-bg__video-Changeout');
+
+    $("#video").toggleClass('fullscreen-bg-Changeout');
+
     $("#location").removeClass('section-selected');
 
     $("#gallery").removeClass("section-selected");
+
+    $("#gallery-1").removeClass("section-selected");
+
+    $("#gallery-2").removeClass("section-selected");
 
     $("#bookings").removeClass("section-selected");
 
@@ -346,8 +464,30 @@ var contactSelect = $('.contact').on('click', function() {
 //add class .nav-footerButtonOnly to #nav-footer h2
 //user can email directly by clicking email address
 //user can click either menu hamburger-icon or logo to escape 'CONTACT'
-var openingHoursSelect = $('#opening-hours').on('click', function() {
-    contactSelect();
+var openingHoursSelect = $('#hours').on('click', function() {
+
+    $("#video").toggleClass('fullscreen-bg-noColor');
+
+    $("#contact-main").toggleClass("section-selected");
+
+    $("#about-main").removeClass("section-selected");
+
+    $("#accommodation-main").removeClass("section-selected");
+
+    $("video").toggleClass('fullscreen-bg__video-Changeout');
+
+    $("#video").toggleClass('fullscreen-bg-Changeout');
+
+    $("#location").removeClass('section-selected');
+
+    $("#gallery").removeClass("section-selected");
+
+    $("#gallery-1").removeClass("section-selected");
+
+    $("#gallery-2").removeClass("section-selected");
+
+    $("#bookings").removeClass("section-selected");
+
 });
 
 //user clicks 'BOOK ONLINE' button
@@ -371,14 +511,26 @@ var bookOnlineButton = $('#book-now').on('click', function() {
     //closeNav();
 
     $('#bookings').toggleClass("section-selected");
-    
-    $("#contact-main").removeClass("section-selected");
 
-    $("#video").removeClass('fullscreen-bg-noColor');
+    $("#about-main").removeClass("section-selected");
+
+    $("#accommodation-main").removeClass("section-selected");
+
+    $("video").toggleClass('fullscreen-bg__video-Changeout');
+
+    $("#video").toggleClass('fullscreen-bg-Changeout');
 
     $("#location").removeClass('section-selected');
 
     $("#gallery").removeClass('section-selected');
+
+    $("#gallery-1").removeClass("section-selected");
+
+    $("#gallery-2").removeClass("section-selected");
+
+    $("#contact-main").removeClass("section-selected");
+
+    $("#video").removeClass('fullscreen-bg-noColor');
 
 });
 
@@ -469,15 +621,25 @@ $('#book-online').on('click', function() {
 
    $("#bookings").toggleClass("section-selected");
 
-    $("#contact-main").removeClass("section-selected");
+    $("#about-main").removeClass("section-selected");
 
-    $("#video").removeClass('fullscreen-bg-noColor');
+    $("#accommodation-main").removeClass("section-selected");
+
+    $("video").toggleClass('fullscreen-bg__video-Changeout');
+
+    $("#video").toggleClass('fullscreen-bg-Changeout');
 
     $("#location").removeClass('section-selected');
 
     $("#gallery").removeClass('section-selected');
 
+    $("#gallery-1").removeClass("section-selected");
 
+    $("#gallery-2").removeClass("section-selected");
+
+    $("#contact-main").removeClass("section-selected");
+
+    $("#video").removeClass('fullscreen-bg-noColor');
 
 });
 

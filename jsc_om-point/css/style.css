@@ -218,7 +218,7 @@ nav a {
 }
 /*  side nav links */
 #SidenavMenu {
-    padding: 200px 8px 8px 150px;
+    padding: 280px 8px 8px 150px;
     text-decoration: none;
     font-size: 1em;
     color: #000000;
@@ -316,7 +316,7 @@ nav a {
 
 .mainMenuItem {
   position: fixed;
-  z-index: 11;
+  z-index: 101;
   visibility: visible;
 }
 
@@ -358,19 +358,10 @@ nav a {
     right: 12%
 }
 
-/*.fullscreen-bg-Changeout {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  z-index: -100;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+.fullscreen-bg-Changeout {
   background: url("https://farm6.staticflickr.com/5468/17079563764_84afb38569_b.jpg") no-repeat;
   background-size: cover;
+  visibility: visible;
 }
 
 .fullscreen-bg__video-Changeout {
@@ -383,7 +374,7 @@ visibility: hidden;
 visibility: hidden;
 }
 
-.fullscreen-bg__video-noColor {
+/*.fullscreen-bg__video-noColor {
 visibility: hidden;
 }
 /*.main-transform
@@ -461,17 +452,36 @@ top: 0;
   width: 100%;
   max-width: 100%;
   position: absolute;
-}
+}*/
 
-/*  #accommodation
-(bookings section)  
-#accommodation {
+#about-main {
   display: block;
   margin: auto;
   padding: 30px;
   width: 100%;
   max-width: 100%;
   position: absolute;
+
+}
+/*  #accommodation
+(bookings section)*/ 
+#accommodation-main {
+  display: block;
+  margin: auto;
+  padding: 30px;
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+}
+
+.a-main {
+  padding-left: 30%;
+  padding-right: 30%;
+  text-align: center;
+}
+
+#a-heading {
+color: black;
 }
 
 /*  #contact
@@ -551,13 +561,12 @@ padding-top: 55%;
   position: absolute;
 }
 
-/*#gallery-1 {
+#gallery-1 {
   display: block;
   margin: auto;
   padding: 30px;
   width: 100%;
   max-width: 100%;
-  float: center;
   position: absolute;
 }
 
@@ -567,28 +576,27 @@ padding-top: 55%;
   padding: 30px;
   width: 100%;
   max-width: 100%;
-  float: center;
   position: absolute;
 }
 
 /* #arrow-left & #arrow-right
 (arrows that will float (horizontally centered) either side of the gallery image)*/
 #arrow-left {
-  font-size: 30px;
+  font-size: 5em;
   display: block;
   float: left;
   width: 25%;
   text-align: right;
-  padding: 150px 0px 0px 0px;
+  padding: 10% 2% 2% 15%;
 }
 
 #arrow-right {
-  font-size: 30px;
+  font-size: 5em;
   display: block;
   float:right;
   width: 25%;
   text-align: left;
-  padding: 150px 0px 0px 0px;
+  padding: 10% 15% 2% 2%;
 }
 /*  .img-container
 (contains gallery images) */
@@ -616,8 +624,10 @@ padding-top: 55%;
   left: 100%;
 }
 
-/*#Om-Point-gallery
-(image inside gallery section will slide to the left new image will slide in as it slides out)*/
+#Om-Point-gallery {
+  width: 25%
+}
+/*(image inside gallery section will slide to the left new image will slide in as it slides out)*/
 
 #location {
  display: block;
