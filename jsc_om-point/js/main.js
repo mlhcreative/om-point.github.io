@@ -108,15 +108,17 @@ var openSideNav = $('#hamburger-icon').on('click', function(e) {
 //etc
 var gallerySelect = $('.gallery').on('click', function() {
 
-    hideMainMenuSideNav();
+    //hideMainMenuSideNav();
 
-    $('#nav-footer').addClass('hide-menu-item').addClass('navSlide-full');
+    //$('#nav-footer').addClass('hide-menu-item').addClass('navSlide-full');
 
-    $('#video').removeClass('fullscreen-bg').addClass('fullscreen-bg-noColor');
+    //$('#video').removeClass('fullscreen-bg').addClass('fullscreen-bg-noColor');
 
-    $('video').toggleClass('fullscreen-bg_video-noColor');
+    //$('video').toggleClass('fullscreen-bg_video-noColor');
 
-    closeNav();
+    //closeNav();
+
+     $("#gallery").toggleClass("section-selected");
 
     //$('#gallery').removeClass('main-transform');
 
@@ -167,17 +169,21 @@ var gallerySelect = $('.gallery').on('click', function() {
 //add class .sidenav
 //remove class .location-hide
 //user clicks .sub-menu-nav items (TRANSPORT, ENTERTAINMENT, RECREATION, SURF-PICKS) map. Markers are displayed on the map. create an array?
-var locationSelected = $('#location').on('click', function() {
+var locationSelected = $('.location').on('click', function() {
 
-    hideMainMenuSideNav();
+    //$("#location").toggleClass("section-selected");
 
-    $('#nav-footer').addClass('hide-menu-item').addClass('navSlide-full');
+    //hideMainMenuSideNav();
 
-    $('#video').removeClass('fullscreen-bg').addClass('fullscreen-bg-noColor');
+    //$('#nav-footer').addClass('hide-menu-item').addClass('navSlide-full');
 
-    $('video').addClass('fullscreen-bg_video-noColor');
+    //$('#video').removeClass('fullscreen-bg').addClass('fullscreen-bg-noColor');
 
-    closeNav();
+    //$('video').addClass('fullscreen-bg_video-noColor');
+
+    //closeNav();
+
+    $("#location").toggleClass("section-selected");
 
     //$('#location').removeClass('#main-transform');
 
@@ -415,9 +421,9 @@ $('#hours').on('click', function() {
 //remove class .fullscreen-bg and add class .fullscreen-bg-Changeout to first body div where video is stored
 //add class .fullscreen-bg_video-Changeout to video
 //remove class .bookings-hide from #bookings
-$('book-online').on('click', function() {
+$('#book-online').on('click', function() {
 
-    bookOnlineButton()
+   $("#bookings").toggleClass("section-selected");
 
 });
 

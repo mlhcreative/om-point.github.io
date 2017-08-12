@@ -315,8 +315,9 @@ nav a {
 
 .main {
     padding: 20px;
-    top: 12%;
+    top: 15%;
     height: 75%;
+    visibility: hidden;
 }
 /* class for when user selects book online form */
 .main-transform {
@@ -592,10 +593,14 @@ td {
 (map inside location section. Updates depending on which sub-menu item user clicks - markers and color change)  */
 
 #map {
-    margin-left:35%;
-    margin-right: 35%;
+    margin: 2%;
+    width: 95%;
     height: 50%;
   }
+
+.section-selected {
+visibility: visible;
+}
 
 #footer-menu {
   color: #D3D3D3;
