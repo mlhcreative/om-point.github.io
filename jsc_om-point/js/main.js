@@ -24,16 +24,19 @@ function openNav() {
     $("arrow-right").toggleClass("arrow-mainTransform");
 
     $(".social").toggleClass("social-transform");
+
+    $(".nav-footer").toggleClass("nav-item-selected");
+
 }
 
 //Page loads
 //Clickable: Logo, menu hamburger icon, "OPENING HOURS", "BOOK ONLINE", Social buttons
 //function for hiding main menu in Side nav
-function hideMainMenuSideNav() {
+//function hideMainMenuSideNav() {
 
-    $('#SidenavMenu').addClass('hide-menu-item');
+   //$(".mainMenuItem").toggleClass("hide-menu-item");
 
-}
+//}
 //option 1.
 //User clicks logo
 //page refreshes
@@ -63,13 +66,16 @@ var openSideNav = $('#hamburger-icon').on('click', function(e) {
 //add class .hide-menu-item to #SidenavMenu
 //add class .selected to #about
 
-//var aboutSelect = $('.about').on('click', function() {
+var aboutSelect = $('.about').on('click', function() {
 
-    //$('#about').addClass('selected');
+   // hideMainMenuSideNav();
 
-    //hideMainMenuSideNav();
+    //$("#about").toggleClass("nav-item-selected");
 
-//});
+    //$("#accommodation").toggleClass("section-selected");
+
+
+});
 
 
 
@@ -79,13 +85,15 @@ var openSideNav = $('#hamburger-icon').on('click', function(e) {
 //add class .hide-menu-item to #SidenavMenu
 //add class .selected to #accommodation
 
-//var accommodationSelect = $('.accommodation').on('click', function() {
+var accommodationSelect = $('.accommodation').on('click', function() {
 
-    //$('#accommodation').addClass('selected');
+    // hideMainMenuSideNav();
 
-    //hideMainMenuSideNav();
+    //$("#about").toggleClass("nav-item-selected");
 
-//});
+    //$("#accommodation").toggleClass("section-selected");
+
+});
 
 
 
@@ -292,16 +300,23 @@ function initMap() {
 //add class .nav-footerButtonOnly to #nav-footer h2
 //user can email directly by clicking email address
 //user can click either menu hamburger-icon or logo to escape 'CONTACT'
-var contactSelect = $('#contact').on('click', function() {
+//var contactSelect = $('#contact').on('click', function() {
 
-    $('#contact').addClass('selected');
+    //$('#contact').addClass('selected');
 
-    $('#nav-footer h2').addClass('nav-footerButtonOnly');
+    //$('#nav-footer h2').addClass('nav-footerButtonOnly');
 
-    hideMainMenuSideNav();
+    //hideMainMenuSideNav();
+
+//});
+var contactSelect = $('.contact').on('click', function() {
+
+     $("#video").toggleClass('fullscreen-bg-noColor');
+
+    $("#contact-main").toggleClass("section-selected");
+
 
 });
-
 //user clicks 'OPENING HOURS'
 //side nav menu is hidden and contact items are displayed in the side nav
 //add class .hide-menu-item to #SidenavMenu
@@ -335,6 +350,8 @@ var bookOnlineButton = $('#book-now').on('click', function() {
     //closeNav();
 
     $('#bookings').toggleClass("section-selected");
+    
+    $("#contact-main").toggleClass("section-selected");
 
 });
 
@@ -424,6 +441,9 @@ $('#hours').on('click', function() {
 $('#book-online').on('click', function() {
 
    $("#bookings").toggleClass("section-selected");
+   
+   $("#contact-main").toggleClass("section-selected");
+
 
 });
 

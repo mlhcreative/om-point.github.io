@@ -249,6 +249,8 @@ nav a {
     .sidenav a {font-size: 18px;}
 }
 
+/*  #contact
+(bookings section)*/  
 #contact {
   text-align: center;
   visibility: hidden;
@@ -258,17 +260,30 @@ nav a {
   text-align: center;
 }
 
+/*  #accommodation
+(bookings section)*/  
 #accommodation {
+  z-index: 11;
+  padding: 2%;
+  position: fixed;
   visibility: hidden;
 }
 
 #accommodation p {
   padding: 35px;
 }
+#accom-heading {
+  padding: 25% 0% 1%:;
+}
+
+/*  #about
+(sidenav section)*/  
 
 #about {
+  z-index: 11;
+  position: fixed;
   visibility: hidden;
-}
+} 
 
 #about p {
   padding: 35px;
@@ -276,7 +291,10 @@ nav a {
 
 .nav-footer {
   top: 60%;
+  width: 25%;
   position: fixed;
+  z-index: 11;
+  visibility: hidden;
 }
 
 .sidenav #nav-footer h2 {
@@ -284,31 +302,43 @@ nav a {
 }
 
 /* back to the menu */
-
-
-.hide-menu-item {
+.nav-item-selected {
   visibility: visible;
 }
 
-/*hide opening hours */
+/*hide opening hours 
 .nav-footerButtonOnly {
   position: fixed;
   visibility: hidden;
+}*/
+
+/*(contact div)*/
+
+.mainMenuItem {
+  position: fixed;
+  z-index: 11;
+  visibility: visible;
 }
 
-/*(contact div)
-
-.mainMenuItem 
-(inside side navigation panel div) 
+.hide-menu-item {
+  visibility: hidden;
+}
+/*(inside side navigation panel div) 
 
 #mini-map 
 (inside contact div)
 
 #accommodation 
-(accommodation div)
+(accommodation div)*/
 
-#book-now 
-(button) (inside accommodation div)
+#book-now {
+  width: 100%;
+}
+/*(button) (inside accommodation div)*/
+/*#opening-hours {
+  text-align: left;
+  padding: 3%;
+}
 
 /*  #main
 (main page contents to be pushed left by side navigation panel. Styles page content - push the page content to the left when you open the side navigation) */
@@ -328,7 +358,7 @@ nav a {
     right: 12%
 }
 
-.fullscreen-bg-Changeout {
+/*.fullscreen-bg-Changeout {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -347,21 +377,10 @@ nav a {
 visibility: hidden;
 }
 
-/* class for when user selects gallery or location #main becomes #mainShiftLeft and background becomes white 
+/* class for when user selects gallery or location #main becomes #mainShiftLeft and background becomes white*/ 
 
 .fullscreen-bg-noColor {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  z-index: -100;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  background: white;
-  background-size: cover;
+visibility: hidden;
 }
 
 .fullscreen-bg__video-noColor {
@@ -433,6 +452,48 @@ margin: 0% 0% 1.5% 0%;
 top: 0;
 }
 
+/*  #about
+(bookings section)  
+#about {
+  display: block;
+  margin: auto;
+  padding: 30px;
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+}
+
+/*  #accommodation
+(bookings section)  
+#accommodation {
+  display: block;
+  margin: auto;
+  padding: 30px;
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+}
+
+/*  #contact
+(bookings section)*/
+#contact-main {
+  display: block;
+  margin: auto;
+  padding: 30px;
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+
+}
+
+#contact-main h2 {
+  font-weight: 400;
+}
+
+#contact-details {
+  text-align: center;
+}
+
 /*  #bookings
 (bookings section)  */
 #bookings {
@@ -471,7 +532,7 @@ display: block;
 padding-top: 55%;
 }
 
-.form{
+.form {
   display: block;
   max-width: 35%;
   top: 0%;
