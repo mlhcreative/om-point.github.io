@@ -364,6 +364,12 @@ nav a {
   visibility: visible;
 }
 
+.fullscreen-bg-Changeout-1 {
+  background: url("images/om-point-3.jpg") no-repeat;
+  background-size: cover;
+  visibility: visible;
+}
+
 .fullscreen-bg__video-Changeout {
 visibility: hidden;
 }

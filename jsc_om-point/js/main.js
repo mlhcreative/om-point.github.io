@@ -77,9 +77,11 @@ var aboutSelect = $('.about').on('click', function() {
 
     $("video").toggleClass('fullscreen-bg__video-Changeout');
 
-    $("#video").toggleClass('fullscreen-bg-Changeout');
+    $("#video").toggleClass('fullscreen-bg-Changeout-1');
 
     //$('#gallery').removeClass('main-transform');
+    $("#video").removeClass('fullscreen-bg-Changeout');
+
     $("#accommodation-main").removeClass("section-selected");
 
     $("#location").removeClass("section-selected");
@@ -120,6 +122,8 @@ var accommodationSelect = $('.accommodation').on('click', function() {
     $("#video").toggleClass('fullscreen-bg-Changeout');
 
     //$('#gallery').removeClass('main-transform');
+    $("#video").removeClass('fullscreen-bg-Changeout-1');
+
     $("#about-main").removeClass("section-selected");
 
     $("#location").removeClass("section-selected");
@@ -176,9 +180,11 @@ var gallerySelect = $('.gallery').on('click', function() {
 
     $("#accommodation-main").removeClass("section-selected");
 
-    $("video").toggleClass('fullscreen-bg__video-Changeout');
+    $("video").removeClass('fullscreen-bg__video-Changeout');
 
-    $("#video").toggleClass('fullscreen-bg-Changeout');
+    $("#video").removeClass('fullscreen-bg-Changeout');
+
+    $("#video").removeClass('fullscreen-bg-Changeout-1');
 
     $("#location").removeClass("section-selected");
 
@@ -301,6 +307,8 @@ var locationSelected = $('.location').on('click', function() {
     $("video").removeClass('fullscreen-bg__video-Changeout');
 
     $("#video").removeClass('fullscreen-bg-Changeout');
+
+    $("#video").removeClass('fullscreen-bg-Changeout-1');
 
     $("#gallery").removeClass("section-selected");
 
@@ -432,9 +440,10 @@ function initMap() {
 //});
 var contactSelect = $('.contact').on('click', function() {
 
-    $("#video").toggleClass('fullscreen-bg-noColor');
 
     $("#contact-main").toggleClass("section-selected");
+
+    $("#video").toggleClass('fullscreen-bg-noColor');
 
     $("#about-main").removeClass("section-selected");
 
@@ -442,7 +451,9 @@ var contactSelect = $('.contact').on('click', function() {
 
     $("video").toggleClass('fullscreen-bg__video-Changeout');
 
-    $("#video").toggleClass('fullscreen-bg-Changeout');
+    $("#video").removeClass('fullscreen-bg-Changeout');
+
+    $("#video").removeClass('fullscreen-bg-Changeout-1');
 
     $("#location").removeClass('section-selected');
 
@@ -466,9 +477,9 @@ var contactSelect = $('.contact').on('click', function() {
 //user can click either menu hamburger-icon or logo to escape 'CONTACT'
 var openingHoursSelect = $('#hours').on('click', function() {
 
-    $("#video").toggleClass('fullscreen-bg-noColor');
-
     $("#contact-main").toggleClass("section-selected");
+
+    $("#video").toggleClass('fullscreen-bg-noColor');
 
     $("#about-main").removeClass("section-selected");
 
@@ -476,7 +487,9 @@ var openingHoursSelect = $('#hours').on('click', function() {
 
     $("video").toggleClass('fullscreen-bg__video-Changeout');
 
-    $("#video").toggleClass('fullscreen-bg-Changeout');
+    $("#video").removeClass('fullscreen-bg-Changeout');
+
+    $("#video").removeClass('fullscreen-bg-Changeout-1');
 
     $("#location").removeClass('section-selected');
 
@@ -520,6 +533,8 @@ var bookOnlineButton = $('#book-now').on('click', function() {
 
     $("#video").toggleClass('fullscreen-bg-Changeout');
 
+    $("video").removeClass('fullscreen-bg-Changeout-1');
+
     $("#location").removeClass('section-selected');
 
     $("#gallery").removeClass('section-selected');
@@ -535,7 +550,19 @@ var bookOnlineButton = $('#book-now').on('click', function() {
 });
 
 //add and store bookings using firebase database
-$('#form').on('submit', function(e) {
+
+$('#confirm-booking').on('click', function () {
+
+$('#reservation').html('Thank you for your booking');
+
+$("video").toggleClass('fullscreen-bg__video-Changeout');
+
+$("#video").toggleClass('fullscreen-bg-Changeout');
+
+});
+
+
+$('#confirm-booking').on('submit', function(e) {
     e.preventDefault();
 
     var firstName = $('#firstName').val(),
@@ -599,15 +626,12 @@ function getComments() {
 getComments();
 
 
-
 //Option 4.
 //user clicks 'OPENING HOURS' on the main page
 //side nav opens and contact items are displayed. Call contact function.
 $('#hours').on('click', function() {
 
-    openSideNav()
-
-    contactSelect()
+    contactSelect();
 
 });
 
@@ -617,29 +641,9 @@ $('#hours').on('click', function() {
 //remove class .fullscreen-bg and add class .fullscreen-bg-Changeout to first body div where video is stored
 //add class .fullscreen-bg_video-Changeout to video
 //remove class .bookings-hide from #bookings
-$('#book-online').on('click', function() {
+$('#book-online').on('click', function(e) {
 
-   $("#bookings").toggleClass("section-selected");
-
-    $("#about-main").removeClass("section-selected");
-
-    $("#accommodation-main").removeClass("section-selected");
-
-    $("video").toggleClass('fullscreen-bg__video-Changeout');
-
-    $("#video").toggleClass('fullscreen-bg-Changeout');
-
-    $("#location").removeClass('section-selected');
-
-    $("#gallery").removeClass('section-selected');
-
-    $("#gallery-1").removeClass("section-selected");
-
-    $("#gallery-2").removeClass("section-selected");
-
-    $("#contact-main").removeClass("section-selected");
-
-    $("#video").removeClass('fullscreen-bg-noColor');
+   console.log(bookOnlineButton);
 
 });
 
